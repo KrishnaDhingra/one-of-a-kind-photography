@@ -40,10 +40,11 @@ function SubMenuLink({ onClick, redirect, text }) {
             exit="exit"
             className="relative sm:absolute top-[130%] sm:left-[-20%] flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
           >
-            {['Chennai', 'Coimbatore', 'Bangalore'].map((item) => {
+            {['Chennai', 'Coimbatore', 'Bangalore'].map((item, index) => {
               return (
                 <motion.div
                   onClick={onClick}
+                  key={index}
                   className="text-xs text-center"
                   variants={itemVariants()}
                 >

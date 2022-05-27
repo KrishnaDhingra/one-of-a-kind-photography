@@ -39,7 +39,7 @@ function BookNowSlider() {
     >
       {items.map((item, index) => {
         return (
-          <SwiperSlide className="book-now-swiper-slide">
+          <SwiperSlide key={index} className="book-now-swiper-slide">
             <img src={item} alt={`Slider Image ${index}`} />
           </SwiperSlide>
         )

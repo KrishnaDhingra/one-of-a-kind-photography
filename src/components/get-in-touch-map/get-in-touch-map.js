@@ -14,7 +14,7 @@ const center = {
 function GetInTouchMap() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyCAmXpb2r3ua3UzvGdYG2Xt7joP8GiFK8A',
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   })
 
   const [map, setMap] = React.useState(null)

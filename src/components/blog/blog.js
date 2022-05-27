@@ -23,9 +23,9 @@ function Blog() {
         <TrendingInfo />
       </article>
       <section className="blog-inner">
-        {[1, 2, 3, 4, 5, 6].map((item) => {
+        {[1, 2, 3, 4, 5, 6].map((item, index) => {
           return (
-            <article>
+            <article key={index}>
               <div className="mb-6">
                 <img
                   className="w-full aspect-video object-cover rounded-[15px]"

@@ -75,6 +75,7 @@ function BookNowContactForm() {
                 <KindOfEventForm
                   item={item}
                   index={index}
+                  key={index}
                   removeEvent={removeEvent}
                 />
               )

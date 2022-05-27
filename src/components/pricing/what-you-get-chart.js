@@ -8,8 +8,8 @@ function WhatYouGetChart() {
   return (
     <main className="what-you-get-chart-container">
       <div className="what-you-get-sidebar">
-        {data.map((item) => (
-          <div className="sidebar-text-container">
+        {data.map((item, index) => (
+          <div className="sidebar-text-container" key={index}>
             <p className="text-center">{item.providing}</p>
           </div>
         ))}
