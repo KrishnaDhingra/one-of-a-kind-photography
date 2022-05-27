@@ -1,0 +1,22 @@
+.aboutus-cofounder-container {
+  margin-top: 7rem;
+  background-color: var(--main-bg-color);
+  padding: 5rem 0rem;
+  color: black;
+}
+.aboutus-cofounder-container .inner-container {
+  margin-inline: auto;
+  width: min(1150px, 95%);
+}
+.aboutus-cofounder-container .inner-container .inner-container-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  gap: 5rem;
+}
+@media only screen and (max-width: 768px) {
+  .aboutus-cofounder-container .inner-container .inner-container-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

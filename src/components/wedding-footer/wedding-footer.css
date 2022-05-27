@@ -1,0 +1,19 @@
+.wedding-footer {
+  width: min(1500px, 95%);
+  align-items: center;
+  margin-inline: auto;
+}
+.wedding-footer > a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.wedding-footer > a:hover {
+  color: rgb(114, 112, 112);
+}
+@media only screen and (max-width: 640px) {
+  .discover-more-text {
+    left: 50%;
+    top: -34px;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,31 @@
+.counter-container {
+  background-color: transparent;
+  display: grid;
+  width: min(1900px, 90%);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  align-items: center;
+  justify-items: space-between;
+  margin-top: 10rem;
+}
+.counter-container > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+}
+.counter-container > * h1 {
+  font-weight: 600;
+  font-size: 60px;
+}
+.counter-container > * p {
+  font-size: 1rem;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .counter-container {
+    gap: 4.2rem;
+  }
+}

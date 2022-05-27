@@ -1,0 +1,102 @@
+nav {
+  background-color: transparent;
+  /* position: relative; */
+}
+nav ul {
+  z-index: -1;
+  inset: 0;
+  position: fixed;
+  width: 100vw;
+  background-color: var(--main-bg-color);
+  display: flex;
+  height: 20rem;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+}
+nav ul section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+nav ul section li {
+  padding-inline: clamp(0.3rem, 1.5vw, 2rem);
+}
+nav ul li a span,
+nav ul li span {
+  color: black;
+  font-weight: 400;
+}
+nav section {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0rem;
+}
+.hamburger {
+  display: flex;
+  gap: 0.33rem;
+}
+.bell path,
+.hamburger > * {
+  transition: all 0.4s;
+}
+.hamburger > * {
+  border-left: 2.7px solid black;
+  border-radius: 10%;
+}
+.bell {
+  color: black;
+}
+.hamburger .line1 {
+  height: 1.25rem;
+}
+.hamburger .line2 {
+  height: 1.9rem;
+}
+.hamburger .line3 {
+  height: 0.71rem;
+}
+@media only screen and (min-width: 850px) {
+  nav ul li a span,
+  nav ul li span {
+    font-size: clamp(1rem, 1vw, 1.2rem);
+  }
+}
+@media only screen and (max-width: 850px) {
+  nav ul li a span,
+  nav ul li span {
+    font-size: 1.3rem;
+  }
+  nav ul {
+    min-height: 100vh;
+    align-items: center;
+    padding-bottom: 0rem;
+  }
+  nav ul section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav ul li a span,
+  nav ul li span {
+    font-size: 1rem;
+  }
+  .hamburger,
+  .bell,
+  .home-icon {
+    transform: scale(0.7, 0.7);
+  }
+  .logo {
+    transform: scale(0.5, 0.5);
+  }
+  .hamburger > * {
+    border-left: 3.5px solid black;
+    border-radius: 10%;
+  }
+}

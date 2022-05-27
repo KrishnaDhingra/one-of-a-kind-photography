@@ -1,0 +1,105 @@
+:root {
+  --border-width: 10px;
+}
+
+.pricing-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.pricing-heading {
+  font-weight: 600;
+  margin: 0 0;
+}
+.pricing-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-block: 3rem;
+  align-items: center;
+  gap: 3.5rem;
+}
+.pricing-inner article {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3rem;
+  border: var(--border-width) solid var(--main-bg-color);
+}
+.pricing-content-container {
+  padding: 1rem 3rem;
+}
+.basic-package {
+  width: min(360px, 95%);
+}
+.customized-package {
+  background-color: var(--main-bg-color);
+  width: min(390px, 95%);
+}
+.customized-package .pricing-content-container {
+  padding: 3.5rem 3rem;
+}
+.top-banner {
+  width: 100%;
+  background-color: var(--main-bg-color);
+  padding-block: 1.4rem;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0;
+  border-radius: 99999px;
+}
+.customized-package .top-banner {
+  background-color: white;
+  color: black;
+}
+.pricing-content-container button {
+  padding: 0.8rem 3rem;
+  border-radius: 15px;
+  background-color: var(--main-bg-color);
+  color: black;
+  margin: 2rem auto;
+  font-weight: 500;
+}
+.pricing-content-container ul {
+  padding-left: 1rem;
+}
+.pricing-content-container ul li {
+  position: relative;
+}
+.pricing-content-container ul li::before {
+  position: absolute;
+  content: '• ';
+  font-size: 2.3rem;
+  top: -64%;
+  left: -10%;
+  color: black;
+}
+.customized-package .pricing-content-container ul li::before {
+  color: black;
+}
+.customized-package button {
+  background-color: white;
+  color: black;
+}
+
+/* hover effect for basic package */
+.basic-package,
+.basic-package > *,
+.basic-package > *::before,
+.basic-package > *::after {
+  transition: all 0.2s;
+}
+.basic-package:hover {
+  transform: scale(1.02, 1.02);
+  background-color: var(--main-bg-color);
+}
+.basic-package:hover .top-banner {
+  background-color: white;
+  color: black;
+}
+.basic-package:hover .basic-package-button {
+  background-color: white;
+  color: black;
+}
