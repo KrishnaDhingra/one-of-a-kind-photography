@@ -7,24 +7,24 @@ export const data = [
     image: CameraImage,
     subheading: 'Candid / Artistic photography',
     text:
-      'Candid Photography is just about the moments. At OOAK, its all about being Candid. We are trained to approach and we work hard to help you relive your moments.',
+      'Candid photographs are more artistic and way more natural. In Candid photography, the photographer is keen on capturing real emotions. And the moments are precisely frozen naturally without artificially posing. Candid photographs can make you feel the same vibe you had on your big day every time you see those photographs.',
   },
   {
     image: CoupleImage,
-    subheading: 'Wedding Film',
+    subheading: 'Wedding Films',
     text:
-      'A wedding we believe is like a movie. The coming together of so many beautiful things into one big happy story that is timeless. Isn’t it important to capture this fairy-tale?',
+      "Every bride and groom wants to replicate a celebrity on their big day. We at OOAK will help to fulfill the couple's desire by capturing their wedding sequence in the most creative and cinematic way by using all the cinematic techniques to make them feel as if they are watching a romantic movie.",
   },
   {
     image: Camera2Image,
     subheading: 'Traditional Photography',
     text:
-      'Traditional wedding photography can be recognized as formal color photos where people are posed and looking toward the camera say Cheese!',
+      'Traditional photography covers the stage photos covering the crowd present, capturing every event and ritual. In traditional photography, events are documented or filmed in the way they are. The sequence of the wedding is captured and you will know what to expect in your wedding album.',
   },
   {
     image: Camera2Image,
-    subheading: 'Lorem Ispum',
+    subheading: 'Documentary Wedding',
     text:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis',
+      "Weddings are rituals narrating the family's tradition and pride flowing through generations and making it unique in every single way. A documentary wedding captures things as they happen, which means being truthful to the scene in front of you and the moment you are capturing.",
   },
 ]

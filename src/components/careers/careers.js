@@ -17,9 +17,9 @@ function Careers() {
               Wedding Photographer
             </h1>
             <p>
-              Are you an experienced wedding photographer looking to move to the
-              next level in the wedding photography industry? We invite you to
-              join our studio to be a part of a larger goal; focus on your
+              Are you a keen observer, giving importance to all the intricate
+              details around you? With an eye for being creative? We invite you
+              to join our studio to be a part of a larger goal; focus on your
               photography without the hassles of being an independent
               professional. Grow, learn and be inspired while working in the
               company of people who are as passionate about photography as you
@@ -39,8 +39,8 @@ function Careers() {
           <div className="flex flex-col gap-8">
             <h2 className="font-semibold">Grow With Us!</h2>
             <p className="hidden sm:block">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              mollitia, molestiae
+              A good leader is one who creates more leaders, let’s make imprints
+              together.
             </p>
             <div className="hidden social-icons-container sm:flex gap-7">
               <BsInstagram className="cursor-pointer" />

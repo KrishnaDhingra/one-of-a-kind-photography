@@ -9,11 +9,11 @@ function WhoAreWe() {
           Who are we?
         </h1>
         <p className="mt-3">
-          Your wedding day is the culmination of a unique love story that
-          transcends time. To memorialise this auspicious occasion, our
-          photographers have the flair and skill to visually tell the story of
-          your love, your union, your personalities with candid, natural shots
-          taken throughout the day.
+          We are a bunch of crazy yet industry-best photographers with an eye
+          for creativity to give you a one of a kind photography experience.
+          Every wedding is a romantic film unscripted. One of a kind photography
+          will be your wedding photography partner to capture and tape every
+          emotion, culture, tradition, and romance in your wedding film.
         </p>
       </article>
 

@@ -31,11 +31,7 @@ function Testimonials() {
         <h1 className="text-[48px] lg:text-[60px] font-semibold">
           What they say?
         </h1>
-        <p className="mt-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis
-        </p>
+        <p className="mt-3">Our journey through our clientele's minds.</p>
       </article>
 
       <div className="w-full overflow-hidden testimonial flex flex-col sm:flex-row gap-8">
@@ -56,7 +52,7 @@ function Testimonial({ image, text, fromUser, next, previous }) {
     <>
       <IoIosArrowBack
         onClick={previous}
-        className="hidden sm:inline shrink-0 text-xl hover:text-gray-400"
+        className="cursor-pointer hidden sm:inline shrink-0 text-xl hover:text-gray-400"
       />
       <img
         className="self-start m-auto max-h-[19rem] max-w-[19rem] sm:max-w-[13rem] lg:max-w-[17rem] object-cover aspect-video sm:aspect-square"
@@ -67,7 +63,7 @@ function Testimonial({ image, text, fromUser, next, previous }) {
       <div className="flex gap-6">
         <IoIosArrowBack
           onClick={previous}
-          className="inline sm:hidden shrink-0 text-xl hover:text-gray-400"
+          className="cursor-pointer inline sm:hidden shrink-0 text-xl hover:text-gray-400"
         />
         <div className="flex flex-col gap-2 justify-center">
           {/* these arrows will appear in the mobile view */}
@@ -76,13 +72,13 @@ function Testimonial({ image, text, fromUser, next, previous }) {
         </div>
         <IoIosArrowForward
           onClick={next}
-          className="inline sm:hidden shrink-0 text-xl hover:text-gray-400"
+          className="cursor-pointer file:before:inline sm:hidden shrink-0 text-xl hover:text-gray-400"
         />
       </div>
       {/* these arrows will disappear in mobile view */}
       <IoIosArrowForward
         onClick={next}
-        className="hidden sm:inline shrink-0 text-xl hover:text-gray-400"
+        className="cursor-pointer hidden sm:inline shrink-0 text-xl hover:text-gray-400"
       />
     </>
   )

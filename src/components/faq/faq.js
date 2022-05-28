@@ -49,9 +49,11 @@ function FAQ() {
         </motion.h1>
         <motion.p
           variants={childrenVariants}
-          className="text-center px-2 sm:px-0 "
+          className="mt-2 text-center px-2 sm:px-0 "
         >
-          Find your answers for the most asked questions
+          Greatest discoveries are made as a result of stupid questioning. For
+          you to discover more about OOAK we have curated a few commonly asked
+          questions below.
         </motion.p>
 
         <div className="faq-inner">

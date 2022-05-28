@@ -8,13 +8,15 @@ function AboutUsTopSection() {
       <h1 className="about-us-heading text-center">About Us</h1>
       <div className="main-content px-8 md:px-0">
         <p>
-          Together with our photographers and video makers, we deliver photo-
-          and video services for you We have a beautiful and spacious photo
-          studio. This is ideal for photographing pack shots, paintings,
-          products or people. Different backgrounds are available, daylight
-          comes in sideways and there is an extensive flash installation. We
-          seek out the best photographers for your assignments and find the
-          right photo for your story
+          Born in late 2014, One of a kind is a wedding photography and candid
+          wedding photography business franchise that is the brainchild of Vikas
+          Alagarsamy and Navya, coupled with a mutual love for wedding
+          photography and an insatiable curiosity for anything creative. Mr.
+          Vikas Alagarsamy was also a Former Founder of Zero gravity
+          Photography. OOAK is an internationally acclaimed Candid Wedding
+          Photography Studio with an impeccable team of exuberant wedding
+          photographers. We like taking the unconventional road and utilizing
+          out-of-the-box ideas.
         </p>
 
         <img

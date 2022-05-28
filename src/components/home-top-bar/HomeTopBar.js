@@ -7,10 +7,9 @@ function HomeTopBar() {
   return (
     <section className="home-top-bar-main-container">
       <div className="left flex flex-col justify-center">
-        <h1 className="heading m-0 font-bold">Lorem Ispum</h1>
+        <h1 className="heading m-0 font-bold">Framing Love & Beyond</h1>
         <p className="text-md m-0 ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam saepe
-          iusto libero nam eos molestias.
+          Let's frame what it feels like to express love in a most natural way.
         </p>
         <Link to="/wedding" className="start font-semibold">
           <span>Start</span>

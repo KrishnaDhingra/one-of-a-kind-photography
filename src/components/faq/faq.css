@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: min(1200px, 95%);
+  margin-inline: auto;
 }
 .circle {
   content: '';
@@ -24,10 +26,8 @@
 }
 .faq-inner {
   margin-top: 4rem;
-  /* background-color: aliceblue; */
   display: flex;
   justify-content: center;
-  width: min(1200px, 95%);
 }
 .faq-inner ul {
   width: 100%;
@@ -47,12 +47,12 @@
   align-items: center;
 }
 .question-container p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.8rem, 2.3vw, 1.3rem);
   font-weight: 500;
 }
 .answer {
   color: rgba(0, 0, 0, 0.5);
-  font-size: clamp(1rem, 2.3vw, 1.3rem);
+  font-size: clamp(0.8rem, 2.3vw, 1.3rem);
 }
 .question-container button {
   font-size: 2.5rem;
