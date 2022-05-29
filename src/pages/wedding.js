@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import WeddingImagesCarousel from '../components/wedding-images-carousel/wedding-images-carousel'
 import WeddingMore from '../components/wedding-more/wedding-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
 import sanityClient from '../client'
 
 function Wedding() {
-  const [weddingMoreVisible, setWeddingMoreVisible] = useState(false)
+  const scrollRef = useRef()
+
+  function scrollIntoView() {
+    scrollRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
 
@@ -33,15 +37,12 @@ function Wedding() {
   return (
     <div className="flex flex-col gap-4">
       <WeddingImagesCarousel
-        visible={weddingMoreVisible}
         images={imageUrls}
         hoverText={hoverText}
         defaultHeading={'Wedding'}
       />
-      <WeddingFooter setMoreVisible={setWeddingMoreVisible} />
-      {weddingMoreVisible && (
-        <WeddingMore weddingMoreVisible={weddingMoreVisible} />
-      )}
+      <WeddingFooter scrollIntoView={scrollIntoView} />
+      <WeddingMore scrollRef={scrollRef} />
     </div>
   )
 }

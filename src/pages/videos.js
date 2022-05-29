@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import VideosImagesCarousel from '../components/videos-images-carousel/videos-images-carousel'
 import OutdoorMore from '../components/outdoor-more/outdoor-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
@@ -7,9 +7,14 @@ import { AnimateSharedLayout } from 'framer-motion'
 import sanityClient from '../client'
 
 function Videos() {
+  const scrollRef = useRef()
+
+  function scrollIntoView() {
+    scrollRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const [happilyIndexCounter, setHappilyIndexCounter] = useState(0)
   const [happilyVisible, setHappilyVisible] = useState(false)
-  const [happilyMoreVisible, setHappilyMoreVisible] = useState(false)
 
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
@@ -44,16 +49,13 @@ function Videos() {
           <VideosImagesCarousel
             setHappilyIndexCounter={setHappilyIndexCounter}
             setHappilyVisible={setHappilyVisible}
-            visible={happilyMoreVisible}
             images={imageUrls}
             hoverText={hoverText}
             defaultHeading={'Videos'}
           />
         )}
-        <WeddingFooter setMoreVisible={setHappilyMoreVisible} />
-        {happilyMoreVisible && (
-          <OutdoorMore setMoreVisible={happilyMoreVisible} />
-        )}
+        <WeddingFooter scrollIntoView={scrollIntoView} />
+        <OutdoorMore scrollRef={scrollRef} />
       </div>
     </AnimateSharedLayout>
   )

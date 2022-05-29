@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import OutdoorImagesCarousel from '../components/outdoor-images-carousel/outdoor-images-carousel'
 import OutdoorMore from '../components/outdoor-more/outdoor-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
 import sanityClient from '../client'
 
 function Outdoor() {
-  const [outdoorMoreVisible, setOutdoorMoreVisible] = useState(false)
+  const scrollRef = useRef()
+
+  function scrollIntoView() {
+    scrollRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
@@ -33,15 +37,12 @@ function Outdoor() {
   return (
     <div className="flex flex-col gap-4">
       <OutdoorImagesCarousel
-        visible={outdoorMoreVisible}
         images={imageUrls}
         hoverText={hoverText}
         defaultHeading={'Outdoor'}
       />
-      <WeddingFooter setMoreVisible={setOutdoorMoreVisible} />
-      {outdoorMoreVisible && (
-        <OutdoorMore setMoreVisible={outdoorMoreVisible} />
-      )}
+      <WeddingFooter scrollIntoView={scrollIntoView} />
+      <OutdoorMore scrollRef={scrollRef} />
     </div>
   )
 }

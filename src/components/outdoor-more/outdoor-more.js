@@ -1,12 +1,6 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 
-function OutdoorMore({ setMoreVisible }) {
-  const scrollRef = useRef()
-
-  useEffect(() => {
-    scrollRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [setMoreVisible])
-
+function OutdoorMore({ scrollRef }) {
   return (
     <section className="my-[5rem] px-4 sm:px-6" ref={scrollRef}>
       <h1 className="text-[48px] font-semibold">Outdoor Wedding Photography</h1>

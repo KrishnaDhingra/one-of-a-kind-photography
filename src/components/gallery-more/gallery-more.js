@@ -1,12 +1,6 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 
-function GalleryMore({ setMoreVisible }) {
-  const scrollRef = useRef()
-
-  useEffect(() => {
-    scrollRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [setMoreVisible])
-
+function GalleryMore({ scrollRef }) {
   return (
     <section className="my-[5rem] px-4 sm:px-6" ref={scrollRef}>
       <h1 className="text-[48px] font-semibold">Latest Photographs</h1>

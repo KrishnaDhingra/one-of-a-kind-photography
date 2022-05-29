@@ -2,7 +2,7 @@ import React from 'react'
 import './wedding-footer.css'
 import { Link } from 'react-router-dom'
 
-function WeddingFooter({ setMoreVisible }) {
+function WeddingFooter({ scrollIntoView }) {
   const relative_path = window.location.pathname
 
   return (
@@ -19,7 +19,7 @@ function WeddingFooter({ setMoreVisible }) {
       )}
       <p
         className="discover-more-text font-semibold absolute sm:font-normal sm:relative"
-        onClick={() => setMoreVisible(true)}
+        onClick={scrollIntoView}
       >
         Discover More +
       </p>
