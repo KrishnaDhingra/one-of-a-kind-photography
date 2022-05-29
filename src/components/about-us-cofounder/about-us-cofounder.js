@@ -9,7 +9,7 @@ function AboutUsCoFounder({ heading, text }) {
   return (
     <section className="aboutus-cofounder-container rounded-3xl md:rounded-t-3xl">
       <div className="inner-container flex flex-col gap-[3rem]">
-        <h1 className="text-[24px] text-center md:text-left md:text-[36px] font-semibold">
+        <h1 className="text-[24px] text-center md:text-left md:text-[36px] font-medium">
           {heading}
         </h1>
         <div className="inner-container-content px-8 md:px-0">

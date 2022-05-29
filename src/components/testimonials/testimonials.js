@@ -28,7 +28,7 @@ function Testimonials() {
   return (
     <main className="testimonials-container mx-auto">
       <article className="px-4 md:px-0 col-start-1 col-end-2">
-        <h1 className="text-[48px] lg:text-[60px] font-semibold">
+        <h1 className="text-[48px] lg:text-[60px] font-medium">
           What they say?
         </h1>
         <p className="mt-3">Our journey through our clientele's minds.</p>

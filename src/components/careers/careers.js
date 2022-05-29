@@ -13,7 +13,7 @@ function Careers() {
         <h1 className="jobs-heading text-center">Careers</h1>
         <div className="main-content px-8 md:px-0">
           <div>
-            <h1 className="wedding-photographer-heading font-semibold mb-4">
+            <h1 className="wedding-photographer-heading font-medium mb-4">
               Wedding Photographer
             </h1>
             <p>

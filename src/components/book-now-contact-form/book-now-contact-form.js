@@ -18,7 +18,7 @@ function BookNowContactForm() {
     <section className="rounded-3xl md:rounded-t-3xl book-now-contact-container">
       <div className="book-now-contact gap-[3rem] lg:gap-[10rem]">
         <div className="flex flex-col gap-8">
-          <h2 className="contact-heading font-semibold">Enquiry Form</h2>
+          <h2 className="contact-heading font-medium">Enquiry Form</h2>
           <p className="contact-summary">
             Thank you for trusting us in capturing the journeys of your life.
             Let’s craft memories together.

@@ -34,7 +34,7 @@ function GetInTouchChennai() {
       <GetInTouch />
       <ContactForm />
       <GetInTouchMap />
-      <h1 className="text-center md:text-left md:ml-28 mb-[5rem] mt-[7rem] text-[24px] md:text-[36px] font-semibold">
+      <h1 className="text-center md:text-left md:ml-28 mb-[5rem] mt-[7rem] text-[24px] md:text-[36px] font-medium">
         Wedding photographers in Bangalore
       </h1>
       <WeddingImagesCarousel

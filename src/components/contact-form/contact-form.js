@@ -6,7 +6,7 @@ function ContactForm() {
     <section className="rounded-3xl md:rounded-t-3xl contact-container">
       <div className="contact gap-[3rem] lg:gap-[10rem]">
         <div className="flex flex-col gap-8">
-          <h2 className="contact-heading font-semibold">Contact Form</h2>
+          <h2 className="contact-heading font-medium">Contact Form</h2>
           <p className="contact-summary">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             mollitia, molestiae

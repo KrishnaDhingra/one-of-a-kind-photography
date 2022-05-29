@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 .pricing-heading {
-  font-weight: 600;
+  font-weight: 500;
   margin: 0 0;
 }
 .pricing-inner {
@@ -44,7 +44,7 @@
   background-color: var(--main-bg-color);
   padding-block: 1.4rem;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   text-align: center;
   margin: 0 0;
@@ -60,7 +60,7 @@
   background-color: var(--main-bg-color);
   color: black;
   margin: 2rem auto;
-  font-weight: 500;
+  font-weight: 400;
 }
 .pricing-content-container ul {
   padding-left: 1rem;

@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import PricingBigImage from './pricing-big-image'
 import WhatYouGetChart from './what-you-get-chart'
 import './pricing.css'
 
@@ -55,7 +54,7 @@ function Pricing() {
           <p className="top-banner">Basic Package</p>
           <div className="pricing-content-container">
             <div className="my-[2rem]">
-              <h1 className="basic-package-price font-semibold">
+              <h1 className="basic-package-price font-medium">
                 ₹2.45 <h3 className="inline">Lakh</h3>
               </h1>
               <h4 className="basic-package-price">$3192 | €2865</h4>
@@ -70,7 +69,7 @@ function Pricing() {
         <article className="customized-package">
           <p className="top-banner">Customized Package</p>
           <div className="pricing-content-container">
-            <h1 className="font-semibold text-[36px] ">Let's Talk</h1>
+            <h1 className="font-medium text-[36px] ">Let's Talk</h1>
             <p className=" my-3">
               Everything in basic, Plus Best for covering all Events
             </p>
@@ -79,8 +78,6 @@ function Pricing() {
           </div>
         </article>
       </motion.section>
-
-      {/* <PricingBigImage /> */}
 
       <WhatYouGetChart />
     </motion.main>

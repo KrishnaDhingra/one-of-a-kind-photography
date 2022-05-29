@@ -21,7 +21,7 @@
   right: -3%;
 }
 .faq-container h1 {
-  font-weight: 600;
+  font-weight: 500;
   margin: 0 0;
 }
 .faq-inner {
@@ -48,7 +48,7 @@
 }
 .question-container p {
   font-size: clamp(0.8rem, 2.3vw, 1.3rem);
-  font-weight: 500;
+  font-weight: 400;
 }
 .answer {
   color: rgba(0, 0, 0, 0.5);

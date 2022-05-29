@@ -5,10 +5,8 @@ function WhoAreWe() {
   return (
     <main className="mx-auto who-are-we-container">
       <article className="px-4 md:px-0 col-start-1 col-end-2">
-        <h1 className="text-[48px] lg:text-[60px] font-semibold">
-          Who are we?
-        </h1>
-        <p className="mt-3">
+        <h1 className="text-[48px] lg:text-[60px] font-medium">Who are we?</h1>
+        <p className="mt-3 text-[15px]">
           We are a bunch of crazy yet industry-best photographers with an eye
           for creativity to give you a one of a kind photography experience.
           Every wedding is a romantic film unscripted. One of a kind photography
@@ -22,9 +20,9 @@ function WhoAreWe() {
           return (
             <article className="flex flex-col gap-3" key={index}>
               <img className="self-start" src={item.image} alt="" />
-              <h3 className="font-semibold">{item.subheading}</h3>
-              <p>{item.text}</p>
-              <h3 className="font-semibold">Discover +</h3>
+              <h4 className="font-medium">{item.subheading}</h4>
+              <p className="text-[15px]">{item.text}</p>
+              <h4 className="font-medium">Discover +</h4>
             </article>
           )
         })}
