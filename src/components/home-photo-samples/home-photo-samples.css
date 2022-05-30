@@ -63,7 +63,8 @@
 }
 @media only screen and (max-width: 600px) {
   .samples-inner {
-    grid-template-rows: 2fr 1.5fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr;
+    height: auto;
   }
   .background {
     grid-row: 1 / 3;

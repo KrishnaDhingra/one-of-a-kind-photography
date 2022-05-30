@@ -24,7 +24,7 @@
   align-self: flex-start;
   padding: 0.5rem 4rem;
 }
-.home-top-bar-main-container .right img {
+.home-top-bar-main-container .right #myVideo {
   width: 85%;
   max-width: 580px;
   border-radius: 45px;
@@ -59,7 +59,7 @@
     bottom: -12%;
     left: 0%;
   }
-  .home-top-bar-main-container .right img {
+  .home-top-bar-main-container .right #myVideo {
     width: 90%;
     max-width: 550px;
     border-radius: 20px;
@@ -87,7 +87,7 @@
     height: 5rem;
     bottom: -12%;
   }
-  .home-top-bar-main-container .right img {
+  .home-top-bar-main-container .right #myVideo {
     max-width: 450px;
   }
 }

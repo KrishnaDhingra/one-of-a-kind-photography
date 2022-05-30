@@ -1,6 +1,6 @@
 import React from 'react'
 import './HomeTopBar.css'
-import SideBarImage from '../../utilities/sidebar-image.png'
+import HomePageVideo from './home-page-video.mp4'
 import { Link } from 'react-router-dom'
 
 function HomeTopBar() {
@@ -19,9 +19,10 @@ function HomeTopBar() {
         </a>
       </div>
       <div className="right relative">
-        <div className="relative ">
-          <img className="" src={SideBarImage} alt="" />
-        </div>
+        <video autoPlay muted loop id="myVideo">
+          <source src={HomePageVideo} type="video/mp4" />
+        </video>
+        <div></div>
       </div>
     </section>
   )
