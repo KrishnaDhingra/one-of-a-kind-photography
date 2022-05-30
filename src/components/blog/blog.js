@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import TrendingImage from '../../utilities/trending-image.png'
 import BlogImage from '../../utilities/blog-image.png'
 import { motion } from 'framer-motion'
+import sanityClient from '../../client'
 import './blog.css'
 
 function Blog() {

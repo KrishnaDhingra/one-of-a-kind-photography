@@ -8,6 +8,7 @@ import gallery from './gallery'
 import services from './services'
 import outdoor from './outdoor'
 import videos from './videos'
+import sidebar from './sidebar'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -21,5 +22,6 @@ export default createSchema({
     services,
     gallery,
     outdoor,
+    sidebar,
   ]),
 })
