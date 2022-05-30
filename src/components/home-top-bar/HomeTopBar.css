@@ -29,11 +29,11 @@
   max-width: 580px;
   border-radius: 45px;
   border: 0.95rem solid white;
+  background-color: rgb(206, 206, 206);
   margin: auto auto;
   flex-shrink: 0;
 }
-.home-top-bar-main-container .right div::before {
-  content: '';
+.home-top-bar-main-container .right div {
   position: absolute;
   bottom: -12%;
   left: -4%;
@@ -54,7 +54,7 @@
     align-items: center;
     text-align: center;
   }
-  .home-top-bar-main-container .right div::before {
+  .home-top-bar-main-container .right div {
     height: 7rem;
     bottom: -12%;
     left: 0%;
@@ -83,7 +83,7 @@
   .home-top-bar-main-container .left h1 {
     text-transform: capitalize;
   }
-  .home-top-bar-main-container .right div::before {
+  .home-top-bar-main-container .right div {
     height: 5rem;
     bottom: -12%;
   }
