@@ -3,12 +3,11 @@ import React from 'react'
 function GalleryMore({ scrollRef }) {
   return (
     <section className="my-[5rem] px-4 sm:px-6" ref={scrollRef}>
-      <h1 className="text-[48px] font-medium">Latest Photographs</h1>
+      <h1 className="text-[48px] font-medium">Gallery</h1>
       <p className="mt-3">
-        We have a beautiful and spacious photo studio. This is ideal for
-        photographing pack shots, paintings, products or people. Different
-        backgrounds are available, daylight comes in sideways and there is an
-        extensive flash installation
+        If you want to know us better, take a look at our gallery to know about
+        our unique craftsmanship and why we are unique in the industry.
+        Experience a whole new dimension of creative photography with us.
       </p>
     </section>
   )

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import VideosImagesCarousel from '../components/videos-images-carousel/videos-images-carousel'
-import OutdoorMore from '../components/outdoor-more/outdoor-more'
+import VideosMore from '../components/videos-more/videos-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
 import HappilyEverAfter from '../components/happily-ever-after/happily-ever-after'
 import { AnimateSharedLayout } from 'framer-motion'
@@ -55,7 +55,7 @@ function Videos() {
           />
         )}
         <WeddingFooter scrollIntoView={scrollIntoView} />
-        <OutdoorMore scrollRef={scrollRef} />
+        <VideosMore scrollRef={scrollRef} />
       </div>
     </AnimateSharedLayout>
   )
