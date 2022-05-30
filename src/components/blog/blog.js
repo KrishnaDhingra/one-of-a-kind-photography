@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import TrendingImage from '../../utilities/trending-image.png'
 import BlogImage from '../../utilities/blog-image.png'
 import { motion } from 'framer-motion'
-import sanityClient from '../../client'
+import TrendingInfo from './trendingInfo'
+import BlogInfo from './blogInfo'
 import './blog.css'
 
 function Blog() {
@@ -13,65 +13,12 @@ function Blog() {
       <h1 className="trending-heading font-medium text-[48px] md:text-[60px]">
         Trending
       </h1>
-      <article className="trending-container">
-        <div>
-          <img
-            className="trending-image object-cover max-w-[279px] w-full aspect-video rounded-[15px]"
-            src={TrendingImage}
-            alt=""
-          />
-        </div>
-        <TrendingInfo />
-      </article>
+      <TrendingInfo />
       <section className="blog-inner">
-        {[1, 2, 3, 4, 5, 6].map((item, index) => {
-          return (
-            <article key={index}>
-              <div className="mb-6">
-                <img
-                  className="w-full aspect-video object-cover rounded-[15px]"
-                  src={BlogImage}
-                  alt=""
-                />
-              </div>
-              <BlogInfo />
-            </article>
-          )
-        })}
+        <BlogInfo />
       </section>
     </main>
   )
 }
-function TrendingInfo() {
-  return (
-    <section className="trending-info">
-      <h3 className="text-[14px] sm:text-[20px] font-medium">Category Name</h3>
-      <h1 className="text-[20px] sm:text-[48px] font-medium">
-        Lorem Ispum Dolor Sit
-      </h1>
-      <div className="mt-3 bottom-container flex gap-4">
-        <div className="bottom-container-circle"></div>
-        <div className="bottom-right-container">
-          <h4 className="font-regular">Name of the writer</h4>
-          <p className="font-regular text-gray-600">Designation</p>
-        </div>
-      </div>
-    </section>
-  )
-}
-function BlogInfo() {
-  return (
-    <section className="blog-info">
-      <h4 className="text-[14px] font-medium">Category Name</h4>
-      <h3 className="text-[20px] font-medium">Lorem Ispum Dolor Sit</h3>
-      <div className="mt-3 bottom-container flex gap-4">
-        <div className="bottom-container-circle"></div>
-        <div className="bottom-right-container">
-          <h4 className="font-regular">Name of the writer</h4>
-          <p className="font-regular text-gray-600">Designation</p>
-        </div>
-      </div>
-    </section>
-  )
-}
+
 export default Blog

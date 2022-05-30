@@ -6,7 +6,6 @@ import { BsInstagram } from 'react-icons/bs'
 import { FiFacebook } from 'react-icons/fi'
 import { FiTwitter } from 'react-icons/fi'
 import { CgClose } from 'react-icons/cg'
-import SideBarImage from '../../utilities/sidebar-image.png'
 import sanityClient from '../../client'
 
 function WhatHappeningSidePopup({ onSelect }) {
@@ -27,7 +26,7 @@ function WhatHappeningSidePopup({ onSelect }) {
     },
   }
 
-  const [blogInfo, setBlogInfo] = useState([])
+  const [sidebarInfo, setSidebarInfo] = useState([])
 
   useEffect(() => {
     sanityClient
@@ -44,7 +43,7 @@ function WhatHappeningSidePopup({ onSelect }) {
       )
       .then((data) => {
         data.forEach((item) => {
-          setBlogInfo((prev) => [
+          setSidebarInfo((prev) => [
             ...prev,
             {
               image: item.sidebarImage.asset.url,
@@ -75,7 +74,7 @@ function WhatHappeningSidePopup({ onSelect }) {
           </h2>
 
           <div className="flex flex-col gap-20">
-            {blogInfo.map((item, index) => {
+            {sidebarInfo.map((item, index) => {
               return <Article {...item} key={index} />
             })}
           </div>

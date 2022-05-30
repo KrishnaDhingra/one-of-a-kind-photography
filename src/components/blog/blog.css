@@ -15,13 +15,13 @@
   margin-top: 0.35rem;
   margin-bottom: 1.3rem;
 }
-.bottom-container-circle {
+.bottom-container-image {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
   border: 0.3rem solid var(--main-bg-color);
 }
-.blog-info .bottom-container-circle {
+.blog-info .bottom-container-image {
   height: 3rem;
   width: 3rem;
 }
@@ -30,7 +30,7 @@
   margin-block: 8.5rem;
   width: min(1100px, 100%);
   gap: 4.9rem;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 }
 @media only screen and (max-width: 900px) {
   .trending-container {

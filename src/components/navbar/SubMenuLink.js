@@ -28,7 +28,7 @@ function SubMenuLink({ onClick, redirect, text }) {
         className="font-semibold flex gap-4"
         variants={itemVariants()}
       >
-        <span className="font-semibold">{text}</span>
+        <span className="font-medium">{text}</span>
         <IoIosArrowBack className="hover:text-gray-600 -rotate-90" />
       </motion.li>
       <AnimatePresence>
