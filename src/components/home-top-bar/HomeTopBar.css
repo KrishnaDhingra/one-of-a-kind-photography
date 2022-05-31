@@ -45,7 +45,7 @@
   border-radius: 50%;
   background-color: var(--main-bg-color);
 }
-.swipe {
+/* .swipe {
   position: relative;
   width: fit-content;
   z-index: 1;
@@ -103,7 +103,7 @@
   100% {
     color: var(--heading-color);
   }
-}
+} */
 @media only screen and (max-width: 1000px) {
   .home-top-bar-main-container {
     flex-direction: column;

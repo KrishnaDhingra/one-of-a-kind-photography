@@ -1,5 +1,5 @@
 import React from 'react'
-import BookNowTopSectionImage from '../../utilities/pricing-big-image2.png'
+import BookNowTopSectionImage from '../../utilities/book-now-image.jpg'
 import './book-now-top-section.css'
 function BookNowTopSection() {
   return (

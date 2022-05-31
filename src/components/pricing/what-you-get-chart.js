@@ -25,10 +25,10 @@ function WhatYouGetChart() {
                 <span className="mx-auto text-[1.2rem]">
                   {item.isBasicPackageAvailable}
                 </span>
+              ) : item.isBasicPackageAvailable === true ? (
+                <FiCheckSquare className="text-[1.3rem] mx-auto cursor-pointer" />
               ) : (
-                item.isBasicPackageAvailable === true && (
-                  <FiCheckSquare className="text-[1.3rem] mx-auto cursor-pointer" />
-                )
+                <span className="mx-auto text-[1.2rem]">_</span>
               )}
             </div>
           )
@@ -45,10 +45,10 @@ function WhatYouGetChart() {
                 <span className="mx-auto text-[1.2rem]">
                   {item.isCustomizedPackageAvailable}
                 </span>
+              ) : item.isCustomizedPackageAvailable === true ? (
+                <FiCheckSquare className="text-[1.3rem] mx-auto cursor-pointer" />
               ) : (
-                item.isCustomizedPackageAvailable === true && (
-                  <FiCheckSquare className="text-[1.3rem] mx-auto cursor-pointer" />
-                )
+                <span className="mx-auto text-[1.2rem]">_</span>
               )}
             </div>
           )

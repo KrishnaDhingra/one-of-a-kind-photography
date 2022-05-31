@@ -3,6 +3,7 @@ import './footer.css'
 import { BsInstagram } from 'react-icons/bs'
 import { FiFacebook } from 'react-icons/fi'
 import { FiTwitter } from 'react-icons/fi'
+import { AiOutlineYoutube } from 'react-icons/ai'
 import { BsMailbox2 } from 'react-icons/bs'
 import { IoMailOpen } from 'react-icons/io5'
 import { BsFillTelephoneFill } from 'react-icons/bs'
@@ -25,14 +26,17 @@ function Footer() {
             while making our clients feel inspired, relaxed, and connected
           </p>
           <div className="flex gap-6">
-            <a href="#">
+            <a href="https://www.instagram.com/oneofakindphotography.in/">
               <BsInstagram className="cursor-pointer" />
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/Oneofakindphotography.in">
               <FiFacebook className="cursor-pointer" />
             </a>
-            <a href="#">
+            <a href="https://twitter.com/weddingsbyooak">
               <FiTwitter className="cursor-pointer" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCdvGm_h_fmUzwemNMKXw2hA/videos">
+              <AiOutlineYoutube className="cursor-pointer" />
             </a>
           </div>
         </div>
