@@ -15,9 +15,9 @@ function BookNowTopSection() {
         </p>
 
         <img
-          className="w-full object-cover aspect-video rounded-2xl"
+          className="w-full book-now-image aspect-video rounded-2xl"
           src={BookNowTopSectionImage}
-          alt="About Us Photo"
+          alt="Book Now Photo"
         />
       </div>
     </section>

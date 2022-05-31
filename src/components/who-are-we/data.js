@@ -18,7 +18,7 @@ export const data = [
   },
   {
     image: WhoAreWeTraditional,
-    subheading: 'Conventional Photography',
+    subheading: 'Conventional / Traditional Photography',
     text:
       'Traditional photography covers the stage photos covering the crowd present, capturing every event and ritual. In traditional photography, events are documented or filmed in the way they are. The sequence of the wedding is captured and you will know what to expect in your wedding album.',
   },
