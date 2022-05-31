@@ -18,7 +18,7 @@ export default {
     },
     {
       name: 'videoLink',
-      title: 'Vide Link',
+      title: 'Video Link',
       type: 'string',
     },
   ],

@@ -17,7 +17,7 @@ function Outdoor() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "wedding"] {
+        `*[_type == "outdoor"] {
       mainImage{
           asset->{
             url

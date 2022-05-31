@@ -22,7 +22,7 @@ function Videos() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "wedding"] {
+        `*[_type == "videos"] {
       mainImage{
           asset->{
             url

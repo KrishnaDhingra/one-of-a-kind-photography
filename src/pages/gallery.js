@@ -17,7 +17,7 @@ function Gallery() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "wedding"] {
+        `*[_type == "gallery"] {
       mainImage{
           asset->{
             url

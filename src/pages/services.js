@@ -17,7 +17,7 @@ function Services() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "wedding"] {
+        `*[_type == "services"] {
       mainImage{
           asset->{
             url
