@@ -1,14 +1,17 @@
 import React from 'react'
 import './video.css'
-
+import { useLocation } from 'react-router-dom'
 function Video() {
+  const location = useLocation()
+  console.log(location)
+  const { videoLink } = location.state
   return (
     <iframe
       id="video"
-      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
-      frameborder="0"
+      src={videoLink}
+      frameBorder="0"
       allow="autoplay; encrypted-media"
-      allowfullscreen
+      allowFullScreen
       title="video"
     />
   )

@@ -18,6 +18,8 @@ function Videos() {
 
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
+  const [documentIds, setDocumentIds] = useState([])
+  const [videoLinks, setVideoLinks] = useState([])
 
   useEffect(() => {
     sanityClient
@@ -28,13 +30,17 @@ function Videos() {
             url
           }
       },
-      hoverText
+      hoverText,
+      videoLink,
+      _id
   }`,
       )
       .then((data) => {
         data.forEach((item) => {
           setImageUrls((prev) => [...prev, item.mainImage.asset.url])
           setHoverText((prev) => [...prev, item.hoverText])
+          setVideoLinks((prev) => [...prev, item.videoLink])
+          setDocumentIds((prev) => [...prev, item._id])
         })
       })
       .catch(console.log)
@@ -43,7 +49,12 @@ function Videos() {
     <AnimateSharedLayout type="crossfade">
       <div className="flex flex-col gap-4">
         {happilyVisible ? (
-          <HappilyEverAfter images={imageUrls} index={happilyIndexCounter} />
+          <HappilyEverAfter
+            images={imageUrls}
+            documentIds={documentIds}
+            videoLinks={videoLinks}
+            index={happilyIndexCounter}
+          />
         ) : (
           // pass all the videos here that have been fethced from firebase and also pass props that will help select the index of the video that have been selected
           <VideosImagesCarousel

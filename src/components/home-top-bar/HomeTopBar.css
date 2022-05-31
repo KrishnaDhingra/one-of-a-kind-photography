@@ -15,7 +15,7 @@
   line-height: normal;
   text-transform: uppercase;
   font-size: clamp(3rem, 3vw, 60px);
-  color: black;
+  color: var(--heading-color);
   z-index: 10;
   /* animation: fade 4s ease-out 1s forwards infinite; */
 }

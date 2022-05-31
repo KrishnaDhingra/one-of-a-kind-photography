@@ -4,8 +4,9 @@ import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io'
 import { motion } from 'framer-motion'
 import { FaPlay } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
-function HappilyEverAfter({ images, index }) {
+function HappilyEverAfter({ images, documentIds, videoLinks, index }) {
   const [indexCounter, setIndexCounter] = useState(index)
 
   // fetch all the videos from firebase or other option is to receive videos as props from videos page component and then use the index that have been selected by the videos images carousel to render the desired image
@@ -31,18 +32,23 @@ function HappilyEverAfter({ images, index }) {
           onClick={previous}
           className="cursor-pointer hover:text-gray-400 text-[2rem]"
         />
-        <div className="cursor-pointer relative happily-ever-after-image-container">
-          <motion.img
-            transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
-            layoutId="main-image"
-            src={images[indexCounter]}
-            className="w-full h-full object-cover rounded-[1.5rem]"
-            alt="Happily Ever After Image"
-          />
-          <button className="play-button ">
-            <FaPlay className="text-[5rem]" />
-          </button>
-        </div>
+        <Link
+          to={`/videos/${documentIds[indexCounter]}`}
+          state={{ videoLink: videoLinks[indexCounter] }}
+        >
+          <div className="cursor-pointer relative happily-ever-after-image-container">
+            <motion.img
+              transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+              layoutId="main-image"
+              src={images[indexCounter]}
+              className="w-full h-full object-cover rounded-[1.5rem]"
+              alt="Happily Ever After Image"
+            />
+            <button className="play-button ">
+              <FaPlay className="text-[5rem]" />
+            </button>
+          </div>
+        </Link>
         <IoIosArrowForward
           onClick={next}
           className="cursor-pointer hover:text-gray-400 text-[2rem]"

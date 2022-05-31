@@ -8,7 +8,7 @@ function HomeTopBar() {
   const typeWriteOptions = {
     strings: 'FRAMING LOVE & BEYOND',
     autoStart: true,
-    delay: 40,
+    delay: 50,
     loop: true,
     pauseFor: 3300,
   }
