@@ -1,6 +1,5 @@
 import React from 'react'
 import './video.css'
-import HomePageVideo from './home-page-video.mp4'
 
 function Video() {
   return (

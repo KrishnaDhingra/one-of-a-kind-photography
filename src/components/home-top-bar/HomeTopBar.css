@@ -15,7 +15,9 @@
   line-height: normal;
   text-transform: uppercase;
   font-size: clamp(3rem, 3vw, 60px);
-  color: var(--heading-color);
+  color: black;
+  z-index: 10;
+  animation: fade 4s ease-out 1s forwards infinite;
 }
 .start {
   margin-top: 2rem;
@@ -42,6 +44,60 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: var(--main-bg-color);
+}
+.swipe {
+  position: relative;
+  width: fit-content;
+  z-index: 1;
+}
+.swipe::before {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 100%;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff5858;
+  animation: swipe 4s ease-out 1s backwards infinite;
+}
+@keyframes swipe {
+  0% {
+    left: 100%;
+    right: 0;
+    width: 0%;
+  }
+  25% {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+  50% {
+    right: 100%;
+    left: 0;
+    width: 0%;
+  }
+  100% {
+    right: 100%;
+    left: 0;
+    width: 0%;
+  }
+}
+@keyframes fade {
+  0% {
+    color: black;
+  }
+  49% {
+    color: black;
+  }
+  50% {
+    color: var(--heading-color);
+  }
+  100% {
+    color: var(--heading-color);
+  }
 }
 @media only screen and (max-width: 1000px) {
   .home-top-bar-main-container {
