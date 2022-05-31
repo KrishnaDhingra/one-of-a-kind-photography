@@ -20,7 +20,7 @@ function ImmortalizeBookNow() {
       <div className="flex flex-col justify-center items-center sm:flex-row gap-4 md:gap-24 text-sm md:text-xl font-semibold">
         <span>
           <BsFillTelephoneFill className="inline-block mr-4" />
-          +91 96773 62524
+          +91 77889 95566
         </span>
         <span>
           <IoMailOpen className="inline-block mr-4" />

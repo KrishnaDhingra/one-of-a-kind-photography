@@ -1,6 +1,8 @@
 import React from 'react'
 import AboutUsTopSection from '../components/about-us-top-section/about-us-top-section'
 import AboutUsCoFounder from '../components/about-us-cofounder/about-us-cofounder'
+import CoFounderImage from '../utilities/co-founder-image.png'
+import FounderImage from '../utilities/founder-image.png'
 import Counter from '../components/counter/counter'
 
 function AboutUs() {
@@ -12,6 +14,7 @@ function AboutUs() {
         text={
           'Vikas’s journey as a Photographer began as a casual fling in 2009, but soon evolved into a full-blown passion for the art. He’s a perfect mix of geek and creative, coming up with novel ideas for the shoot and solving the technological equation of how to make the idea work. OOAK is his brain child, born out of his love for photography and determination to redefine “Wedding Photography” in India.'
         }
+        image={CoFounderImage}
       />
       <p className="w-[95%] max-w-[1150px] mx-auto mt-[6.5rem] leading-[30px] px-8 md:px-0">
         Born in late 2014, One of a kind is a wedding photography and candid
@@ -52,6 +55,7 @@ function AboutUs() {
         text={
           'Navya, an artist by heart and smiles. She captures the essence of human joy, love, emotions and stories of human experience and loves to travel. Each of her pictures, tells a story. Her wedding photography has always been based on great communication with the bride and groom. The best wedding photography is truly candid – the photographer should blend into the background, and capture the genuine smiles. '
         }
+        image={FounderImage}
       />
       <Counter />
     </main>

@@ -8,8 +8,8 @@ function ContactForm() {
         <div className="flex flex-col gap-8">
           <h2 className="contact-heading font-medium">Contact Form</h2>
           <p className="contact-summary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            mollitia, molestiae
+            Thank you for trusting us in capturing the journeys of your life.
+            Let’s craft memories together.
           </p>
         </div>
 

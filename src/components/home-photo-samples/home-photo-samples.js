@@ -1,8 +1,6 @@
 import React from 'react'
 import './home-photo-samples.css'
 import { data } from './home-photo-samples-data'
-import { Link } from 'react-router-dom'
-import SamplePhoto from '../../utilities/sample-photo.png'
 
 function HomePhotoSamplesContainer() {
   return (
@@ -19,7 +17,7 @@ function HomePhotoSamplesContainer() {
                 <p className="content">{item.text}</p>
               </div>
               <div className="sample-image-container">
-                <img src={SamplePhoto} alt="" />
+                <img src={item.image} alt="" />
               </div>
             </div>
           </div>
