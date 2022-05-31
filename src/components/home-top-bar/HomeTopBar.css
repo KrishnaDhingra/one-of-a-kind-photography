@@ -15,9 +15,9 @@
   line-height: normal;
   text-transform: uppercase;
   font-size: clamp(3rem, 3vw, 60px);
-  color: black;
+  color: var(--heading-color);
   z-index: 10;
-  animation: fade 4s ease-out 1s forwards infinite;
+  /* animation: fade 4s ease-out 1s forwards infinite; */
 }
 .start {
   margin-top: 2rem;
@@ -56,33 +56,38 @@
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 100%;
   right: 0;
   width: 0%;
   height: 100%;
-  background-color: #ff5858;
-  animation: swipe 4s ease-out 1s backwards infinite;
+  visibility: visible;
+  background-color: black;
+  animation: swipe 6s ease-out 1.5s forwards infinite;
 }
 @keyframes swipe {
   0% {
-    left: 100%;
     right: 0;
     width: 0%;
+    visibility: visible;
   }
-  25% {
+  10% {
     right: 0;
-    left: 0;
     width: 100%;
+    visibility: visible;
   }
-  50% {
-    right: 100%;
-    left: 0;
-    width: 0%;
+  30% {
+    right: 0;
+    width: 100%;
+    visibility: visible;
+  }
+  46% {
+    right: 0;
+    width: 100%;
+    visibility: hidden;
   }
   100% {
-    right: 100%;
-    left: 0;
-    width: 0%;
+    right: 0;
+    width: 100%;
+    visibility: hidden;
   }
 }
 @keyframes fade {

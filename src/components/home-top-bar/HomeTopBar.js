@@ -2,13 +2,15 @@ import React from 'react'
 import './HomeTopBar.css'
 import HomePageVideo from './home-page-video.mp4'
 import { Link } from 'react-router-dom'
+import Typewriter from 'typewriter-effect'
 
 function HomeTopBar() {
   const typeWriteOptions = {
     strings: 'FRAMING LOVE & BEYOND',
     autoStart: true,
+    delay: 40,
     loop: true,
-    pauseFor: 3000,
+    pauseFor: 3300,
   }
 
   return (
