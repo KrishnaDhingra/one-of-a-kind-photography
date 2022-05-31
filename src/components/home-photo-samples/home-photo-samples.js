@@ -17,9 +17,6 @@ function HomePhotoSamplesContainer() {
                   {item.heading}
                 </h3>
                 <p className="content">{item.text}</p>
-                <Link to={'#'} className="discover font-medium">
-                  Discover +
-                </Link>
               </div>
               <div className="sample-image-container">
                 <img src={SamplePhoto} alt="" />

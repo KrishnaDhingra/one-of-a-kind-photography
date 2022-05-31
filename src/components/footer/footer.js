@@ -49,7 +49,7 @@ function Footer() {
             </a>
             <a href="#">
               <BsFillTelephoneFill />
-              <span>+91 9677362524</span>
+              <span>+91 77889 95566</span>
             </a>
           </div>
         </div>

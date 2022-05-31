@@ -151,3 +151,8 @@ section {
   box-sizing: border-box;
   padding: 0;
 }
+.fixed-whatsapp-icon {
+  position: fixed;
+  top: 85vh;
+  right: 50px;
+}

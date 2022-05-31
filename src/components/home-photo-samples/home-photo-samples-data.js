@@ -2,7 +2,7 @@ export const data = [
   {
     heading: 'Wedding photography',
     text:
-      'We are a bunch of crazy yet industry-best photographers with an eye for creativity to give you a one of a kind photography experience. Every wedding is a romantic film unscripted. One of a kind photography will be your wedding photography partner to capture and tape every emotion, culture, tradition, and romance in your wedding film. ',
+      "Marriages are made in heaven, celebrated on land witnessed by photographers. We freeze your moments into frames transcending time. Make you relive your big day every time you see it again in a cinematic way.  Let's film your unscripted love tale to make the spectators fall in love every time they see it.",
   },
   {
     heading: 'Maternity shoot',

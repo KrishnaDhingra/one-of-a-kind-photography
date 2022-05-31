@@ -22,7 +22,6 @@ function WhoAreWe() {
               <img className="self-start" src={item.image} alt="" />
               <h4 className="font-medium">{item.subheading}</h4>
               <p className="text-[15px]">{item.text}</p>
-              <h4 className="font-medium">Discover +</h4>
             </article>
           )
         })}

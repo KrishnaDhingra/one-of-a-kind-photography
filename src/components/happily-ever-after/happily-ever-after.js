@@ -40,7 +40,7 @@ function HappilyEverAfter({ images, index }) {
             alt="Happily Ever After Image"
           />
           <button className="play-button ">
-            <FaPlay className="text-[5rem] text-gray-400" />
+            <FaPlay className="text-[5rem]" />
           </button>
         </div>
         <IoIosArrowForward

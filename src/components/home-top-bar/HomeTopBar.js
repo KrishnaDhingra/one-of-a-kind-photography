@@ -14,9 +14,6 @@ function HomeTopBar() {
         <Link to="/wedding" className="start font-semibold">
           <span>Start</span>
         </Link>
-        <a href="#" className="mt-3">
-          <span className="text-md discover-more">Discover More</span>
-        </a>
       </div>
       <div className="right relative">
         <video autoPlay muted loop id="myVideo">

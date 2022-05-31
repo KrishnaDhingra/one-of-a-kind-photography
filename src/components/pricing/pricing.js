@@ -57,7 +57,7 @@ function Pricing() {
               <h1 className="basic-package-price font-medium">
                 ₹2.45 <h3 className="inline">Lakh</h3>
               </h1>
-              <h4 className="basic-package-price">$3192 | €2865</h4>
+              <h4 className="basic-package-price">$3192 | UAE 11724</h4>
             </div>
             <p className="my-4 basic-package-points-heading">Inclusive of</p>
             <BasicPackagePoints />

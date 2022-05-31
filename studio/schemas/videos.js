@@ -16,5 +16,10 @@ export default {
       title: 'Hover Text',
       type: 'string',
     },
+    {
+      name: 'videoLink',
+      title: 'Vide Link',
+      type: 'string',
+    },
   ],
 }

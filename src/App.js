@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import { AnimatePresence } from 'framer-motion'
+import { BsWhatsapp } from 'react-icons/bs'
 import Enter from './components/enter/Enter'
 import Navbar from './components/navbar/Navbar'
 import Home from './pages/home'
@@ -19,6 +20,7 @@ import GetInTouchChennai from './pages/get-in-touch-chennai'
 import GetInTouchBangalore from './pages/get-in-touch-bangalore'
 import GetInTouchCoimbatore from './pages/get-in-touch-coimbatore'
 import BookNow from './pages/book-now'
+import Video from './components/video/video'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   const [loading, setLoading] = useState(true)
@@ -63,8 +65,10 @@ function App() {
                 path="/get-in-touch-coimbatore"
                 element={<GetInTouchCoimbatore />}
               />
+              <Route path="/videos/:id" element={<Video />} />
             </Routes>
             <Footer />
+            <BsWhatsapp className="fixed-whatsapp-icon text-white bg-gray-600 rounded-full text-[4rem] p-4" />
           </>
         )}
       </AnimatePresence>

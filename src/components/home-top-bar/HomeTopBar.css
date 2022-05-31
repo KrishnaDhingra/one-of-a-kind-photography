@@ -28,7 +28,7 @@
   width: 85%;
   max-width: 580px;
   border-radius: 45px;
-  border: 0.95rem solid white;
+  border: 0.55rem solid white;
   background-color: rgb(206, 206, 206);
   margin: auto auto;
   flex-shrink: 0;
@@ -76,7 +76,6 @@
   }
   .home-top-bar-main-container .left h1 {
     font-weight: 500;
-    color: black;
   }
 }
 @media only screen and (max-width: 600px) {
