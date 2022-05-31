@@ -30,7 +30,7 @@ function GetInTouch() {
             </a>
             <a href="#" className="flex gap-4 items-center">
               <BsFillTelephoneFill />
-              <span>+91 9677362524</span>
+              <span>+91 77889 95566</span>
             </a>
           </div>
         </div>

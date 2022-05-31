@@ -4,9 +4,14 @@ import HomePageVideo from './home-page-video.mp4'
 
 function Video() {
   return (
-    <video autoPlay muted loop id="video">
-      <source className="h-full w-full" src={HomePageVideo} type="video/mp4" />
-    </video>
+    <iframe
+      id="video"
+      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      title="video"
+    />
   )
 }
 export default Video

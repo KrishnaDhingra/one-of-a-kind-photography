@@ -37,6 +37,7 @@
   height: var(--coloums-height);
   font-size: 1.5rem;
   display: flex;
+  align-items: center;
 }
 .basic-package-availability > div:nth-child(odd),
 .customized-package-availability > div:nth-child(odd) {

@@ -68,7 +68,7 @@ function App() {
               <Route path="/videos/:id" element={<Video />} />
             </Routes>
             <Footer />
-            <BsWhatsapp className="fixed-whatsapp-icon text-white bg-gray-600 rounded-full text-[4rem] p-4" />
+            <BsWhatsapp className="fixed-whatsapp-icon text-white bg-green-600 rounded-full text-[4rem] p-4" />
           </>
         )}
       </AnimatePresence>

@@ -10,7 +10,7 @@ function WhatYouGetChart() {
       <div className="what-you-get-sidebar">
         {data.map((item, index) => (
           <div className="sidebar-text-container" key={index}>
-            <p className="text-center">{item.providing}</p>
+            <p className="px-4 text-center">{item.providing}</p>
           </div>
         ))}
       </div>
@@ -21,8 +21,14 @@ function WhatYouGetChart() {
         {data.map((item) => {
           return (
             <div className="check-square">
-              {item.isBasicPackageAvailable && (
-                <FiCheckSquare className="mx-auto cursor-pointer" />
+              {typeof item.isBasicPackageAvailable !== 'boolean' ? (
+                <span className="mx-auto text-[1.2rem]">
+                  {item.isBasicPackageAvailable}
+                </span>
+              ) : (
+                item.isBasicPackageAvailable === true && (
+                  <FiCheckSquare className="text-[1.3rem] mx-auto cursor-pointer" />
+                )
               )}
             </div>
           )
@@ -35,8 +41,14 @@ function WhatYouGetChart() {
         {data.map((item) => {
           return (
             <div className="check-square">
-              {item.isCustomizedPackageAvailable && (
-                <FiCheckSquare className="mx-auto cursor-pointer" />
+              {typeof item.isCustomizedPackageAvailable !== 'boolean' ? (
+                <span className="mx-auto text-[1.2rem]">
+                  {item.isCustomizedPackageAvailable}
+                </span>
+              ) : (
+                item.isCustomizedPackageAvailable === true && (
+                  <FiCheckSquare className="text-[1.3rem] mx-auto cursor-pointer" />
+                )
               )}
             </div>
           )
