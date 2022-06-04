@@ -33,14 +33,14 @@ function WhatHappeningSidePopup({ onSelect }) {
     sanityClient
       .fetch(
         `*[_type == "sidebar"] {
-      sidebarImage{
-          asset->{
-            url
-          }
-      },
-      heading,
-      text
-  }`,
+        sidebarImage{
+            asset->{
+              url
+            }
+        },
+        heading,
+        text
+    }`,
       )
       .then((data) => {
         data.forEach((item) => {

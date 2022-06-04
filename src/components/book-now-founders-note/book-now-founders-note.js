@@ -1,6 +1,6 @@
 import React from 'react'
 import './book-now-founders-note.css'
-import FounderImage from '../../utilities/founder-image.png'
+import FounderImage from '../../utilities/co-founder-image.png'
 import FoundersNoteSignatureImage from '../../utilities/founders-note-signature.png'
 import { BsInstagram } from 'react-icons/bs'
 import { FiFacebook } from 'react-icons/fi'
