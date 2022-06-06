@@ -7,11 +7,13 @@ function BookNowTopSection() {
       <h1 className="book-now-heading text-center">Book Now</h1>
       <div className="main-content px-8 md:px-0">
         <p>
-          Let's create memories together. We are honored to be a part of your
-          big day/event. It's a privilege for us to freeze your moments which
-          you will cherish forever. Let's talk to connect and hold a seamless
-          journey together, we are ready to answer you anytime. Your information
-          is never sold and there is no pressure to buy.
+          You have found the one person on earth you want to spend the rest of
+          your life with? The greatest love and your true best friend? Think
+          about that for a second, because that's powerful. At One Of A Kind
+          Photography, we will be by your side every step of the way, ready to
+          capture the very essence of your love story. We're honored you're here
+          and would love to learn about you and your story! Have a sneak peek at
+          our portfolio for inspiration and feel free to contact us.
         </p>
 
         <img

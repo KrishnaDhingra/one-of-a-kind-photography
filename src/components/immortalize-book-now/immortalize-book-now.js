@@ -6,7 +6,7 @@ import './immortalize-book-now.css'
 function ImmortalizeBookNow() {
   return (
     <section className="max-w-[1150px] w-[95%] mx-auto items-center flex flex-col gap-[3.5rem] md:gap-[5.125rem] mt-[7rem]">
-      <h1 className="immortalize-book-now-heading relative text-center text-[24px] md:text-[48px] font-semibold">
+      <h1 className="immortalize-book-now-heading relative text-center text-[24px] md:text-[48px] font-medium">
         Immortalize Your Most Memorable Day
       </h1>
       <p className="text-center px-6 md:px-32">
@@ -17,7 +17,7 @@ function ImmortalizeBookNow() {
         developing a system that takes all the stress off of you. It's your day,
         we want you to enjoy it!
       </p>
-      <div className="flex flex-col justify-center items-center sm:flex-row gap-4 md:gap-24 text-sm md:text-xl font-semibold">
+      <div className="flex flex-col justify-center items-center sm:flex-row gap-4 md:gap-24 text-sm md:text-xl font-medium">
         <span>
           <BsFillTelephoneFill className="inline-block mr-4" />
           +91 77889 95566

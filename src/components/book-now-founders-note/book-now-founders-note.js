@@ -39,20 +39,23 @@ function BookNowFoundersNote({}) {
             Founders Note
           </h1>
           <p className="leading-[26px]">
-            Born in late 2014, One of a kind is a wedding photography and candid
-            wedding photography business franchise that is the brainchild of
-            Vikas Alagarsamy and Navya, coupled with a mutual love for wedding
-            photography and an insatiable curiosity for anything creative. Mr.
-            Vikas Alagarsamy was also a Former Founder of Zero gravity
-            Photography. We are an internationally acclaimed Candid Wedding
-            Photography Studio with an impeccable team of effervescent wedding
-            photographers. We like taking the unconventional road and utilizing
-            out-of-the-box ideas. Since we love to globetrot whenever possible,
-            we would like to capture your momentous occasion that the layman
-            calls a wedding in all its glory, making it a picture filled with
-            everything that describes your love story and also adding an
-            individualistic twist with our candid wedding photography just
-            because we know how special this day is for you.
+            There’s nothing more incredible than finding the one person you
+            can’t live without. Your true best friend. I want to photograph this
+            connection. Whether we adventure somewhere beautiful together or
+            explore the intimacy of your own home, I want to capture the true
+            versions of you. Don’t hold back. You only get this moment once. You
+            be you, I’ll be me. Let’s create something real. Capturing true love
+            with all its flaws, not the idea of some kind of boring perfection.
+            When it comes to my approach, I channel every image through the lens
+            of the love I have for my own family. If you're looking for a
+            photographer who relishes the polished + proper portraits, then
+            you've come to the wrong place. I'm all about the in-between
+            moments; I thrive in the details. I'm Vikas Alagarsamy IF YOU LIKE
+            UNCONVENTIONAL, HONEST, RAW, AND REAL PHOTOS, I’M YOUR PERSON. My
+            heart is to always give what I believe is most important for you to
+            receive. Let's focus on what means most to you. That’s how we tick.
+            Snoop around our site and insta-feed to see if this could be a match
+            (we hope it is!).
           </p>
           <img src={FoundersNoteSignatureImage} alt="Founder Signature Image" />
         </div>

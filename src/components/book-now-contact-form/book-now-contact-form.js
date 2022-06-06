@@ -107,7 +107,7 @@ function KindOfEventForm({ index, item, removeEvent }) {
       {index != 0 && (
         <CgClose
           onClick={() => removeEvent(item)}
-          className="absolute right-[40px] text-2xl"
+          className="absolute right-[10px] text-xl md:text-2xl"
         />
       )}
       <div className="flex flex-col gap-3 text-[14px] select-input-container">
