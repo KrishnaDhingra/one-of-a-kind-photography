@@ -1,6 +1,5 @@
 import React from 'react'
 import './about-us-cofounder.css'
-import AboutUsCoFounderImage from '../../utilities/pricing-big-image2.png'
 import { BsInstagram } from 'react-icons/bs'
 import { FiFacebook } from 'react-icons/fi'
 import { FiTwitter } from 'react-icons/fi'

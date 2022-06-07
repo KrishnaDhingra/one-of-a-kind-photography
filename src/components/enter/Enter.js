@@ -1,7 +1,7 @@
 import React from 'react'
 import './Enter.css'
 import { motion, AnimatePresence } from 'framer-motion'
-import EnterImage from '../../utilities/enter-image.png'
+import EnterImage from '../../utilities/logo.webp'
 
 function Enter() {
   const Parent = {

@@ -8,7 +8,7 @@ import { BsMailbox2 } from 'react-icons/bs'
 import { IoMailOpen } from 'react-icons/io5'
 import { BsFillTelephoneFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
-import FooterLogo from '../../utilities/enter-image.png'
+import FooterLogo from '../../utilities/logo.webp'
 
 function Footer() {
   return (

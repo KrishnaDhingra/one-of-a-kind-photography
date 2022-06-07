@@ -1,5 +1,5 @@
 import SampleImage1 from '../../utilities/sidebar-image.png'
-import SampleImage2 from '../../utilities/sample-image2.png'
+import SampleImage2 from '../../utilities/sample-image2.webp'
 import SampleImage3 from '../../utilities/sample-image3.png'
 import SampleImage4 from '../../utilities/sample-image4.png'
 

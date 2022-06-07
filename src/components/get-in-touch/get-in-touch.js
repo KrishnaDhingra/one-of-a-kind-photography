@@ -1,6 +1,6 @@
 import React from 'react'
 import './get-in-touch.css'
-import GetInTouchImage from '../../utilities/pricing-big-image2.png'
+import GetInTouchImage from '../../utilities/sample-image2.webp'
 import { BsMailbox2 } from 'react-icons/bs'
 import { IoMailOpen } from 'react-icons/io5'
 import { BsFillTelephoneFill } from 'react-icons/bs'
