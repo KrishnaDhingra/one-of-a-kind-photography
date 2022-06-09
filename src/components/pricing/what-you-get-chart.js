@@ -17,9 +17,12 @@ function WhatYouGetChart() {
         Basic Package
       </h3>
       <section className="basic-package-availability sm:rounded-bl-3xl rounded-bl-2xl">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <div className="check-square text-[1rem] sm:text-[1.2rem]">
+            <div
+              key={index}
+              className="check-square text-[1rem] sm:text-[1.2rem]"
+            >
               {typeof item.isBasicPackageAvailable !== 'boolean' ? (
                 <span className="mx-auto">{item.isBasicPackageAvailable}</span>
               ) : item.isBasicPackageAvailable === true ? (
@@ -35,9 +38,12 @@ function WhatYouGetChart() {
         Customized Package
       </h3>
       <section className="customized-package-availability sm:rounded-br-3xl rounded-br-2xl">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <div className="check-square text-[1rem] sm:text-[1.2rem]">
+            <div
+              key={index}
+              className="check-square text-[1rem] sm:text-[1.2rem]"
+            >
               {typeof item.isCustomizedPackageAvailable !== 'boolean' ? (
                 <span className="mx-auto">
                   {item.isCustomizedPackageAvailable}

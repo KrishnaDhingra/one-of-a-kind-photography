@@ -45,6 +45,9 @@ function BookNowTopSection() {
             alt="Book Now Photo"
           />
         )}
+        {!imageUrl && (
+          <div className="w-full bg-gray-300 aspect-video rounded-2xl"></div>
+        )}
       </div>
     </section>
   )
