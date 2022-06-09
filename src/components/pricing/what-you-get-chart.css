@@ -15,7 +15,6 @@
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   background-color: var(--main-bg-color);
-  border-radius: 25px;
 }
 .basic-package-heading {
   grid-column: 2 / 3;
@@ -35,7 +34,6 @@
 .basic-package-availability .check-square,
 .customized-package-availability .check-square {
   height: var(--coloums-height);
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
 }

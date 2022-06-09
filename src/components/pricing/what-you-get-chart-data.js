@@ -10,12 +10,7 @@ export const data = [
     isCustomizedPackageAvailable: true,
   },
   {
-    providing: 'Conventional/Traditional Photography',
-    isBasicPackageAvailable: true,
-    isCustomizedPackageAvailable: true,
-  },
-  {
-    providing: 'Conventional/Traditional Video',
+    providing: 'Conventional Video',
     isBasicPackageAvailable: true,
     isCustomizedPackageAvailable: true,
   },
