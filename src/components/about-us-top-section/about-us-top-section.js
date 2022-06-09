@@ -1,8 +1,29 @@
-import React from 'react'
-import AboutUsTopSectionImage from '../../utilities/sample-image2.webp'
+import React, { useState, useEffect } from 'react'
 import './about-us-top-section.css'
+import sanityClient from '../../client'
 
 function AboutUsTopSection() {
+  const [imageUrl, setImageUrl] = useState(null)
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "aboutUsImage"] {
+      mainImage{
+          asset->{
+            url
+          }
+      },
+      hoverText
+  }`,
+      )
+      .then((data) => {
+        data.forEach((item) => {
+          setImageUrl(item.mainImage.asset.url)
+        })
+      })
+      .catch(console.log)
+  }, [])
+
   return (
     <section className="about-us-top-section-container flex flex-col gap-12">
       <h1 className="about-us-heading text-center">About Us</h1>
@@ -17,11 +38,13 @@ function AboutUsTopSection() {
           you for decades to come.
         </p>
 
-        <img
-          className="w-full object-cover aspect-video rounded-2xl"
-          src={AboutUsTopSectionImage}
-          alt="About Us Photo"
-        />
+        {imageUrl && (
+          <img
+            className="w-full object-cover aspect-video rounded-2xl"
+            src={imageUrl}
+            alt="About Us Photo"
+          />
+        )}
       </div>
     </section>
   )

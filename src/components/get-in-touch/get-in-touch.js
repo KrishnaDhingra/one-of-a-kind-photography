@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './get-in-touch.css'
-import GetInTouchImage from '../../utilities/sample-image2.webp'
 import { BsMailbox2 } from 'react-icons/bs'
 import { IoMailOpen } from 'react-icons/io5'
 import { BsFillTelephoneFill } from 'react-icons/bs'
+import sanityClient from '../../client'
 
 function GetInTouch() {
+  const [imageUrl, setImageUrl] = useState(null)
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "getInTouchImage"] {
+      mainImage{
+          asset->{
+            url
+          }
+      },
+      hoverText
+  }`,
+      )
+      .then((data) => {
+        data.forEach((item) => {
+          setImageUrl(item.mainImage.asset.url)
+        })
+      })
+      .catch(console.log)
+  }, [])
+
   return (
     <section className="get-in-touch-container flex flex-col gap-12">
       <h1 className="get-in-touch-heading text-center">Get In Touch</h1>
@@ -35,11 +56,13 @@ function GetInTouch() {
           </div>
         </div>
 
-        <img
-          className="w-full object-cover aspect-video rounded-2xl"
-          src={GetInTouchImage}
-          alt="Careers Photo"
-        />
+        {imageUrl && (
+          <img
+            className="w-full object-cover aspect-video rounded-2xl"
+            src={imageUrl}
+            alt="Careers Photo"
+          />
+        )}
       </div>
     </section>
   )

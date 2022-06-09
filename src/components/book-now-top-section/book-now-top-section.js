@@ -1,7 +1,29 @@
-import React from 'react'
-import BookNowTopSectionImage from '../../utilities/book-now-image.jpg'
+import React, { useState, useEffect } from 'react'
 import './book-now-top-section.css'
+import sanityClient from '../../client'
+
 function BookNowTopSection() {
+  const [imageUrl, setImageUrl] = useState(null)
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "bookNowImage"] {
+      mainImage{
+          asset->{
+            url
+          }
+      },
+      hoverText
+  }`,
+      )
+      .then((data) => {
+        data.forEach((item) => {
+          setImageUrl(item.mainImage.asset.url)
+        })
+      })
+      .catch(console.log)
+  }, [])
+
   return (
     <section className="book-now-top-section-container flex flex-col gap-12">
       <h1 className="book-now-heading text-center">Book Now</h1>
@@ -16,11 +38,13 @@ function BookNowTopSection() {
           our portfolio for inspiration and feel free to contact us.
         </p>
 
-        <img
-          className="w-full book-now-image aspect-video rounded-2xl"
-          src={BookNowTopSectionImage}
-          alt="Book Now Photo"
-        />
+        {imageUrl && (
+          <img
+            className="w-full book-now-image aspect-video rounded-2xl"
+            src={imageUrl}
+            alt="Book Now Photo"
+          />
+        )}
       </div>
     </section>
   )

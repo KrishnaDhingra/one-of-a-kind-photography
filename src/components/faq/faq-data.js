@@ -2,7 +2,7 @@ export const data = [
   {
     question: 'Can you brief me on your pricing? Is the price negotiable?',
     answer:
-      'Weddings are rituals expressing unique sets of traditions, culture, expectations, and fantasies the couple has for their big day, which are unfit into numbers. Our pricing will be personalized depending on your requirements. But, our basic package starts from ₹2.45 Lakh | $3192 | €2865. The package includes covering two events in the Candid/Artistic style photography, traditional photography, traditional video, and wedding film. We would also give you a beautiful premium Photo-book of these events. Time is priceless and so capturing a moment is, so we do not practice negotiation in the work of art.',
+      'Weddings are rituals expressing unique sets of traditions, culture, expectations, and fantasies the couple has for their big day, which are unfit into numbers. Our pricing will be personalized depending on your requirements. But, our basic package starts from ₹2.45 Lakh | $3192 | UAE11724. The package includes covering two events in the Candid/Artistic style photography, traditional photography, traditional video, and wedding film. We would also give you a beautiful premium Photo-book of these events. Time is priceless and so capturing a moment is, so we do not practice negotiation in the work of art.',
   },
   {
     question:

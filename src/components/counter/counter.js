@@ -18,7 +18,7 @@ function Counter() {
           const increment = targetCount / 20
 
           if (startingCount < targetCount) {
-            counter.innerHTML = Math.round(startingCount + increment)
+            counter.innerHTML = Math.ceil(startingCount + increment)
             setTimeout(updateCounter, 40)
           } else {
             counter.innerHTML = targetCount
@@ -32,20 +32,20 @@ function Counter() {
   return (
     <section ref={ref} className="counter-container">
       <div>
-        <h1 className="counter" data-target="100">
-          100
+        <h1 className="counter" data-target="120">
+          120
         </h1>
-        <p>Project Completed</p>
+        <p>ProjectS Completed</p>
       </div>
       <div>
-        <h1 className="counter" data-target="500">
-          500
+        <h1 className="counter" data-target="100">
+          100
         </h1>
         <p>Happy Clients</p>
       </div>
       <div>
-        <h1 className="counter" data-target="100">
-          100
+        <h1 className="counter" data-target="7">
+          7
         </h1>
         <p>Destinations</p>
       </div>

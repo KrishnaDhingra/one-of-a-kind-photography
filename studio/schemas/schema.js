@@ -11,6 +11,11 @@ import videos from './videos'
 import sidebar from './sidebar'
 import trendingBlog from './trendingBlog'
 import blog from './blog'
+import homePhotoSamples from './homePhotoSamples'
+import jobsImage from './jobsImage'
+import aboutUsImage from './aboutUsImage'
+import getInTouchImage from './getInTouchImage'
+import bookNowImage from './bookNowImage'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -27,5 +32,10 @@ export default createSchema({
     sidebar,
     trendingBlog,
     blog,
+    homePhotoSamples,
+    jobsImage,
+    aboutUsImage,
+    bookNowImage,
+    getInTouchImage,
   ]),
 })

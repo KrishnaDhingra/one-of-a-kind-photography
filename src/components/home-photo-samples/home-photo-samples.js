@@ -1,8 +1,49 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './home-photo-samples.css'
 import { data } from './home-photo-samples-data'
+import sanityClient from '../../client'
 
 function HomePhotoSamplesContainer() {
+  const [imageUrls, setImageUrls] = useState(null)
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "homePhotoSamples"] {
+      weddingPhotography{
+          asset->{
+            url
+          }
+      },
+      maternityShoot{
+          asset->{
+            url
+          }
+      },
+      birthPhotography{
+          asset->{
+            url
+          }
+      },
+      specialEvents{
+          asset->{
+            url
+          }
+      },
+  }`,
+      )
+      .then((data) => {
+        data.forEach((item) => {
+          setImageUrls([
+            item.weddingPhotography.asset.url,
+            item.maternityShoot.asset.url,
+            item.birthPhotography.asset.url,
+            item.specialEvents.asset.url,
+          ])
+        })
+      })
+      .catch(console.log)
+  }, [])
+
   return (
     <section className="main-samples-container">
       {data.map((item, index) => {
@@ -17,7 +58,7 @@ function HomePhotoSamplesContainer() {
                 <p className="content">{item.text}</p>
               </div>
               <div className="sample-image-container">
-                <img src={item.image} alt="" />
+                {imageUrls && <img src={imageUrls[index]} alt="" />}
               </div>
             </div>
           </div>

@@ -1,13 +1,34 @@
-import React from 'react'
-import CareersTopSectionImage from '../../utilities/careers-top-section-image.jpg'
+import React, { useState, useEffect } from 'react'
 import BookNowSlider from '../book-now-slider/book-now-slider'
 import { BsInstagram } from 'react-icons/bs'
 import { FiFacebook } from 'react-icons/fi'
 import { FiTwitter } from 'react-icons/fi'
 import { AiOutlineYoutube } from 'react-icons/ai'
 import './careers.css'
+import sanityClient from '../../client'
 
 function Careers() {
+  const [imageUrl, setImageUrl] = useState(null)
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "jobsImage"] {
+      mainImage{
+          asset->{
+            url
+          }
+      },
+      hoverText
+  }`,
+      )
+      .then((data) => {
+        data.forEach((item) => {
+          setImageUrl(item.mainImage.asset.url)
+        })
+      })
+      .catch(console.log)
+  }, [])
+
   return (
     <main className="flex flex-col">
       <section className="jobs-top-section-container flex flex-col gap-12">
@@ -28,11 +49,13 @@ function Careers() {
             </p>
           </div>
 
-          <img
-            className="w-full object-cover aspect-video rounded-2xl"
-            src={CareersTopSectionImage}
-            alt="Careers Photo"
-          />
+          {imageUrl && (
+            <img
+              className="w-full object-cover aspect-video rounded-2xl"
+              src={imageUrl}
+              alt="Careers Photo"
+            />
+          )}
         </div>
       </section>
       <section className="rounded-t-3xl grow-with-us-container">
