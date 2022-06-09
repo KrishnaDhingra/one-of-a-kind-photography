@@ -37,7 +37,7 @@ export default [
   { path: '/aboutus', component: AboutUs },
   { path: '/careers', component: Careers },
   { path: '/book-now', component: BookNow },
-  { path: '/video', component: Videos },
+  { path: '/video', component: Video },
   { path: '/get-in-touch-chennai', component: GetInTouchChennai },
   { path: '/get-in-touch-coimbatore', component: GetInTouchCoimbatore },
   { path: '/get-in-touch-bangalore', component: GetInTouchBangalore },
