@@ -88,7 +88,7 @@ function TrendingInfo() {
 
 const TrendingInfoSkeleton = () => {
   return (
-    <article className="mt-[5rem] flex gap-[2rem] ">
+    <article className="trending-container">
       <div className="max-w-[279px] w-screen aspect-video rounded-[15px] bg-gray-300"></div>
       <section className="flex flex-col gap-[0.7rem]">
         <div className="w-screen max-w-[230px] h-[1.8rem] bg-gray-300"></div>

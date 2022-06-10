@@ -39,6 +39,7 @@ function VideosImagesCarousel({
           grabCursor={true}
           centeredSlides={true}
           centeredSlidesBounds={true}
+          // loop={true}
           slidesPerView={'auto'}
           spaceBetween={25}
           onSlideChange={({ activeIndex }) => {

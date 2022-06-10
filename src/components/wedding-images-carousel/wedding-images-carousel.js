@@ -34,6 +34,7 @@ function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
           centeredSlides={true}
           centeredSlidesBounds={true}
           slidesPerView={'auto'}
+          // loop={true}
           spaceBetween={25}
           onSlideChange={({ activeIndex }) => {
             setIsVisible(false)

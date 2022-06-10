@@ -17,7 +17,6 @@
   font-size: clamp(3rem, 3vw, 60px);
   color: var(--heading-color);
   z-index: 10;
-  /* animation: fade 4s ease-out 1s forwards infinite; */
 }
 .start {
   margin-top: 2rem;
@@ -34,6 +33,7 @@
   background-color: rgb(206, 206, 206);
   margin: auto auto;
   flex-shrink: 0;
+  /* aspect-ratio: 16 / 9; */
 }
 .home-top-bar-main-container .right div {
   position: absolute;
@@ -45,65 +45,6 @@
   border-radius: 50%;
   background-color: var(--main-bg-color);
 }
-/* .swipe {
-  position: relative;
-  width: fit-content;
-  z-index: 1;
-}
-.swipe::before {
-  display: block;
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  width: 0%;
-  height: 100%;
-  visibility: visible;
-  background-color: black;
-  animation: swipe 6s ease-out 1.5s forwards infinite;
-}
-@keyframes swipe {
-  0% {
-    right: 0;
-    width: 0%;
-    visibility: visible;
-  }
-  10% {
-    right: 0;
-    width: 100%;
-    visibility: visible;
-  }
-  30% {
-    right: 0;
-    width: 100%;
-    visibility: visible;
-  }
-  46% {
-    right: 0;
-    width: 100%;
-    visibility: hidden;
-  }
-  100% {
-    right: 0;
-    width: 100%;
-    visibility: hidden;
-  }
-}
-@keyframes fade {
-  0% {
-    color: black;
-  }
-  49% {
-    color: black;
-  }
-  50% {
-    color: var(--heading-color);
-  }
-  100% {
-    color: var(--heading-color);
-  }
-} */
 @media only screen and (max-width: 1000px) {
   .home-top-bar-main-container {
     flex-direction: column;
