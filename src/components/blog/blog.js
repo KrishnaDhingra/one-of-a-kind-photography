@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react'
-import BlogImage from '../../utilities/blog-image.png'
-import { motion } from 'framer-motion'
 import TrendingInfo from './trendingInfo'
 import BlogInfo from './blogInfo'
 import './blog.css'

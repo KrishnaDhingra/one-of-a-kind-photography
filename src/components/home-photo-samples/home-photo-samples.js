@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './home-photo-samples.css'
 import { data } from './home-photo-samples-data'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import sanityClient from '../../client'
 
 function HomePhotoSamplesContainer() {
@@ -58,7 +59,15 @@ function HomePhotoSamplesContainer() {
                 <p className="content">{item.text}</p>
               </div>
               <div className="sample-image-container">
-                {imageUrls && <img src={imageUrls[index]} alt="" />}
+                {imageUrls && (
+                  <LazyLoadImage
+                    // effect="blur"
+                    alt={`Home photo sample ${index}`}
+                    src={imageUrls[index]}
+                    width="100%"
+                    height="100%"
+                  />
+                )}
               </div>
             </div>
           </div>

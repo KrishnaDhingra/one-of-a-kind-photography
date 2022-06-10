@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import TrendingImage from '../../utilities/trending-image.png'
 import sanityClient from '../../client'
 
 function TrendingInfo() {
@@ -46,7 +45,7 @@ function TrendingInfo() {
 
   return (
     <>
-      {trendingInfo.length !== 0 && (
+      {trendingInfo.length != 0 && (
         <article className="trending-container">
           <div>
             <img
@@ -82,8 +81,27 @@ function TrendingInfo() {
           </section>
         </article>
       )}
+      {trendingInfo.length == 0 && <TrendingInfoSkeleton />}
     </>
   )
 }
 
+const TrendingInfoSkeleton = () => {
+  return (
+    <article className="mt-[5rem] flex gap-[2rem] ">
+      <div className="max-w-[279px] w-screen aspect-video rounded-[15px] bg-gray-300"></div>
+      <section className="flex flex-col gap-[0.7rem]">
+        <div className="w-screen max-w-[230px] h-[1.8rem] bg-gray-300"></div>
+        <div className="w-screen max-w-[280px] h-[2.5rem] bg-gray-300"></div>
+        <div className="mt-3 bottom-container flex gap-4">
+          <div className="h-full aspect-square rounded-full bg-gray-300"></div>
+          <div className="bottom-right-container w-full flex flex-col gap-[0.3rem]">
+            <div className="w-[60%] h-[1.5rem] bg-gray-300"></div>
+            <div className="w-[60%] h-[1.3rem] bg-gray-300"></div>
+          </div>
+        </div>
+      </section>
+    </article>
+  )
+}
 export default TrendingInfo

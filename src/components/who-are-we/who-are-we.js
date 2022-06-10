@@ -1,6 +1,7 @@
 import React from 'react'
 import './who-are-we.css'
 import { data } from './data'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 function WhoAreWe() {
   return (
     <main className="mx-auto who-are-we-container">
@@ -19,7 +20,11 @@ function WhoAreWe() {
         {data.map((item, index) => {
           return (
             <article className="flex flex-col gap-3" key={index}>
-              <img className="self-start" src={item.image} alt="" />
+              <LazyLoadImage
+                className="self-start"
+                alt={item.subheading}
+                src={item.image}
+              />
               <h4 className="font-medium">{item.subheading}</h4>
               <p className="text-[15px]">{item.text}</p>
             </article>
