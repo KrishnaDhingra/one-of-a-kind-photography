@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './image-gallery.css'
+import sanityClient from '../../client'
 function ImageGallery() {
   const items = [
     'https://images.unsplash.com/photo-1592743263126-bb241ee76ac7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80',
@@ -22,10 +23,32 @@ function ImageGallery() {
     'https://swiperjs.com/demos/images/nature-7.jpg',
   ]
 
+  const [imageUrls, setImageUrls] = useState([])
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "imageGallery"] {
+      mainImage{
+          asset->{
+            url
+          }
+      },
+      hoverText
+  }`,
+      )
+      .then((data) => {
+        data.forEach((item) => {
+          setImageUrls((prev) => [...prev, item.mainImage.asset.url])
+        })
+      })
+      .catch(console.log)
+  }, [])
+
   return (
     <section id="photos">
-      {items.map((element) => {
-        return <img src={element} alt="" />
+      {imageUrls.map((item) => {
+        return <img src={item} alt="" />
       })}
     </section>
   )

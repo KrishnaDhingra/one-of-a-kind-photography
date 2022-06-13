@@ -9,9 +9,9 @@ function BookNow() {
     <main>
       <BookNowTopSection />
       <BookNowContactForm />
-      <BookNowSlider />
       <BookNowFoundersNote />
       <ImmortalizeBookNow />
+      <BookNowSlider />
     </main>
   )
 }
