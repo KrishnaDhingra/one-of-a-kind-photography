@@ -95,30 +95,28 @@ function VideosImagesCarousel({
         >
           {images.map((image, index) => {
             return (
-              <Link to="/image-gallery" className="videos-image">
-                <motion.div
-                  layout
-                  key={index}
-                  onMouseEnter={() => {
-                    setIsVisible(false)
-                    // change this
-                    setSelected(hoverText[index])
-                  }}
-                  onClick={() => {
-                    setHappilyIndexCounter(index)
-                    setHappilyVisible(true)
-                  }}
-                  onMouseLeave={() => setIsVisible(true)}
-                  whileHover={{
-                    width: '220px',
-                    transition: { duration: 0.4 },
-                  }}
-                  className="videos-image"
-                  style={{
-                    backgroundImage: `url(${image})`,
-                  }}
-                ></motion.div>
-              </Link>
+              <motion.div
+                layout
+                key={index}
+                onMouseEnter={() => {
+                  setIsVisible(false)
+                  // change this
+                  setSelected(hoverText[index])
+                }}
+                onClick={() => {
+                  setHappilyIndexCounter(index)
+                  setHappilyVisible(true)
+                }}
+                onMouseLeave={() => setIsVisible(true)}
+                whileHover={{
+                  width: '220px',
+                  transition: { duration: 0.4 },
+                }}
+                className="videos-image"
+                style={{
+                  backgroundImage: `url(${image})`,
+                }}
+              ></motion.div>
             )
           })}
         </motion.section>
