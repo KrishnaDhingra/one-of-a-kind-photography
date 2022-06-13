@@ -34,6 +34,7 @@ function BookNowSlider() {
       slidesPerView={'auto'}
       spaceBetween={25}
       pagination={true}
+      direction={'horizontal'}
       modules={[Pagination]}
       className="book-now-swiper"
     >

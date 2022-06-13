@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './videos-images-carousel.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Link } from 'react-router-dom'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -59,19 +60,24 @@ function VideosImagesCarousel({
         >
           {images.map((image, index) => {
             return (
-              <SwiperSlide
-                key={index}
-                onClick={() => {
-                  setHappilyIndexCounter(index)
-                  setHappilyVisible(true)
-                }}
-              >
-                <motion.img
-                  transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
-                  layoutId="main-image"
-                  src={image}
-                />
-              </SwiperSlide>
+              <Link to="/image-gallery">
+                <SwiperSlide
+                  key={index}
+                  onClick={() => {
+                    setHappilyIndexCounter(index)
+                    setHappilyVisible(true)
+                  }}
+                >
+                  <motion.img
+                    transition={{
+                      ease: [0.6, 0.01, -0.05, 0.9],
+                      duration: 1.6,
+                    }}
+                    layoutId="main-image"
+                    src={image}
+                  />
+                </SwiperSlide>
+              </Link>
             )
           })}
         </Swiper>
@@ -89,28 +95,30 @@ function VideosImagesCarousel({
         >
           {images.map((image, index) => {
             return (
-              <motion.div
-                layout
-                key={index}
-                onMouseEnter={() => {
-                  setIsVisible(false)
-                  // change this
-                  setSelected(hoverText[index])
-                }}
-                onClick={() => {
-                  setHappilyIndexCounter(index)
-                  setHappilyVisible(true)
-                }}
-                onMouseLeave={() => setIsVisible(true)}
-                whileHover={{
-                  width: '220px',
-                  transition: { duration: 0.4 },
-                }}
-                className="videos-image"
-                style={{
-                  backgroundImage: `url(${image})`,
-                }}
-              ></motion.div>
+              <Link to="/image-gallery" className="videos-image">
+                <motion.div
+                  layout
+                  key={index}
+                  onMouseEnter={() => {
+                    setIsVisible(false)
+                    // change this
+                    setSelected(hoverText[index])
+                  }}
+                  onClick={() => {
+                    setHappilyIndexCounter(index)
+                    setHappilyVisible(true)
+                  }}
+                  onMouseLeave={() => setIsVisible(true)}
+                  whileHover={{
+                    width: '220px',
+                    transition: { duration: 0.4 },
+                  }}
+                  className="videos-image"
+                  style={{
+                    backgroundImage: `url(${image})`,
+                  }}
+                ></motion.div>
+              </Link>
             )
           })}
         </motion.section>

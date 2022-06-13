@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Link } from 'react-router-dom'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -51,9 +52,11 @@ function OutdoorImagesCarousel({ visible, hoverText, images, defaultHeading }) {
         >
           {images.map((image, index) => {
             return (
-              <SwiperSlide key={index}>
-                <img src={image} />
-              </SwiperSlide>
+              <Link to="/image-gallery">
+                <SwiperSlide key={index}>
+                  <img src={image} />
+                </SwiperSlide>
+              </Link>
             )
           })}
         </Swiper>
@@ -71,24 +74,26 @@ function OutdoorImagesCarousel({ visible, hoverText, images, defaultHeading }) {
         >
           {images.map((image, index) => {
             return (
-              <motion.div
-                layout
-                key={index}
-                onMouseEnter={() => {
-                  setIsVisible(false)
-                  // change this
-                  setSelected(hoverText[index])
-                }}
-                onMouseLeave={() => setIsVisible(true)}
-                whileHover={{
-                  width: '220px',
-                  transition: { duration: 0.4 },
-                }}
-                className="videos-image"
-                style={{
-                  backgroundImage: `url(${image})`,
-                }}
-              ></motion.div>
+              <Link to="/image-gallery" className="videos-image">
+                <motion.div
+                  layout
+                  key={index}
+                  onMouseEnter={() => {
+                    setIsVisible(false)
+                    // change this
+                    setSelected(hoverText[index])
+                  }}
+                  onMouseLeave={() => setIsVisible(true)}
+                  whileHover={{
+                    width: '220px',
+                    transition: { duration: 0.4 },
+                  }}
+                  className="videos-image"
+                  style={{
+                    backgroundImage: `url(${image})`,
+                  }}
+                ></motion.div>
+              </Link>
             )
           })}
         </motion.section>

@@ -41,15 +41,35 @@ function Navbar() {
                     text={'About us'}
                     redirect={'/aboutus'}
                   />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Jobs'}
-                    redirect={'/careers'}
-                  />
                   <SubMenuLink
                     onClick={toggleNavbarVisibility}
                     text={'Location'}
                     redirect={'/'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Gallery'}
+                    redirect={'/gallery'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Wedding'}
+                    redirect={'/Wedding'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Outdoor'}
+                    redirect={'/outdoor'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Videos'}
+                    redirect={'/videos'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Pricing'}
+                    redirect={'/pricing'}
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
@@ -63,38 +83,18 @@ function Navbar() {
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
-                    text={'Blog'}
+                    text={'Blogs'}
                     redirect={'/blog'}
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
-                    text={'Pricing'}
-                    redirect={'/pricing'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Wedding'}
-                    redirect={'/wedding'}
+                    text={'Jobs'}
+                    redirect={'/careers'}
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
                     text={'Services'}
                     redirect={'/services'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Outdoor'}
-                    redirect={'/outdoor'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Gallery'}
-                    redirect={'/gallery'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Videos'}
-                    redirect={'/videos'}
                   />
                 </section>
               </motion.ul>
