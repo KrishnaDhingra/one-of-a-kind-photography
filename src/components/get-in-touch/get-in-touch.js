@@ -5,7 +5,7 @@ import { IoMailOpen } from 'react-icons/io5'
 import { BsFillTelephoneFill } from 'react-icons/bs'
 import sanityClient from '../../client'
 
-function GetInTouch() {
+function GetInTouch({location}) {
   const [imageUrl, setImageUrl] = useState(null)
   useEffect(() => {
     sanityClient
@@ -43,7 +43,7 @@ function GetInTouch() {
           <div className="social-info-container flex flex-col gap-6 text-md mt-7">
             <a href="#" className="flex gap-4 items-center">
               <BsMailbox2 />
-              <span>Banaswadi, Bangalore - 560033</span>
+              <span>{location}</span>
             </a>
             <a href="#" className="flex gap-4 items-center">
               <IoMailOpen />
