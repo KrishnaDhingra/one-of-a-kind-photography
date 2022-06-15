@@ -15,11 +15,13 @@ function Footer() {
     <footer className="home-footer px-[3rem] xl:px-[6.375rem]">
       <div className="footer-top gap-[4rem] xl:gap-[8rem]">
         <div>
-          <img
-            src={FooterLogo}
-            className="inline-block w-[17rem] mt-[-5rem] mb-[-4.9rem] ml-[-2.4rem]"
-            alt="Footer Logo"
-          />
+          <Link to="/">
+            <img
+              src={FooterLogo}
+              className="inline-block w-[17rem] mt-[-5rem] mb-[-4.9rem] ml-[-2.4rem]"
+              alt="Footer Logo"
+            />
+          </Link>
           <p>
             Every wedding has its own unique sense of style and personality, our
             cinematic approach is to be non-directorial and more observative
@@ -42,11 +44,30 @@ function Footer() {
         </div>
         <div>
           <h3>Contacts</h3>
-          <div>
-            <a href="#">
-              <BsMailbox2 />
-              <span>Banaswadi, Bangalore - 560033</span>
-            </a>
+          <div className="flex flex-col gap-3">
+            <div className="flex gap-[1.5rem]">
+              <BsMailbox2 className="shrink-0" />
+              <span className="flex gap-[0.5rem]">
+                <a
+                  className="inline-block pr-3"
+                  href="https://goo.gl/maps/Qt35tx4VMqgZpD9b6"
+                >
+                  Chennai
+                </a>
+                <a
+                  className="inline-block pr-3"
+                  href="https://goo.gl/maps/mXtySYyDnHYbqMRb6"
+                >
+                  Coimbatore
+                </a>
+                <a
+                  className="inline-block"
+                  href="https://goo.gl/maps/mXtySYyDnHYbqMRb6"
+                >
+                  Bangalore
+                </a>
+              </span>
+            </div>
             <a href="#">
               <IoMailOpen />
               <span>vikas@ooak.photography</span>

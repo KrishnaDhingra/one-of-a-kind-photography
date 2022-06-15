@@ -12,8 +12,6 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 }
-.home-footer div {
-}
 .footer-top h3 {
   font-weight: 500;
 }
@@ -26,14 +24,14 @@
   flex-direction: column;
   gap: 2rem;
 }
-.footer-top > *:nth-child(2) div,
+
 .footer-top > *:nth-child(3) div {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 .footer-top > *:nth-child(1) p,
-.footer-top > *:nth-child(2) div a span,
+.footer-top > *:nth-child(2) div span,
 .footer-top > *:nth-child(3) div a,
 .bottom .copyright,
 .bottom div a {

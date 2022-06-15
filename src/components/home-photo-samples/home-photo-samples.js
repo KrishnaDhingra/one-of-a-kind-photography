@@ -61,12 +61,14 @@ function HomePhotoSamplesContainer() {
               <div className="sample-image-container">
                 {imageUrls && (
                   <LazyLoadImage
-                    // effect="blur"
                     alt={`Home photo sample ${index}`}
                     src={imageUrls[index]}
                     width="100%"
                     height="100%"
                   />
+                )}
+                {!imageUrls && (
+                  <div className="bg-gray-300 h-full w-full"></div>
                 )}
               </div>
             </div>
