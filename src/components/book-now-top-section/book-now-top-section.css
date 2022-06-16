@@ -14,11 +14,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
 }
-.book-now-image {
-  object-fit: none;
-  object-position: 50% 20%;
-  border-radius: 1rem;
-}
 @media only screen and (max-width: 900px) {
   .book-now-top-section-container .main-content {
     grid-template-columns: 1fr;

@@ -40,7 +40,7 @@ function BookNowTopSection() {
 
         {imageUrl && (
           <img
-            className="w-full book-now-image aspect-video rounded-2xl"
+            className="w-full object-cover aspect-video rounded-2xl"
             src={imageUrl}
             alt="Book Now Photo"
           />
