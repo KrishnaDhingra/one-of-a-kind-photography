@@ -20,7 +20,8 @@ import bookNowSlider from './bookNowSlider'
 import imageGallery from './imageGallery'
 import detailTrendingBlog from './detailTrendingBlog'
 import detailBlog from './detailBlog'
-import blockContent from './blockContent'
+import detailBlogHeader from './detailBlogHeader'
+import detailTrendingBlogHeader from './detailTrendingBlogHeader'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -46,6 +47,7 @@ export default createSchema({
     imageGallery,
     detailTrendingBlog,
     detailBlog,
-    blockContent,
+    detailBlogHeader,
+    detailTrendingBlogHeader,
   ]),
 })

@@ -1,13 +1,26 @@
 export default {
   name: 'detailTrendingBlog',
-  title: 'Trending Blog',
+  title: 'Detail Trending Blog',
   type: 'document',
 
   fields: [
     {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      name: 'heading',
+      title: 'Heading',
+      type: 'string',
+    },
+    {
+      name: 'content',
+      title: 'Content',
+      type: 'string',
+    },
+    {
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
   ],
 }
