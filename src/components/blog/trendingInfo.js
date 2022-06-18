@@ -9,6 +9,7 @@ function TrendingInfo() {
     sanityClient
       .fetch(
         `*[_type == "trendingBlog"] {
+          _id,
           trendingImage{
               asset->{
                 url
@@ -22,15 +23,16 @@ function TrendingInfo() {
             asset->{
               url
             }
-        }
+          },
+
       }`,
       )
       .then((data) => {
-        console.log(data)
         data.forEach((item) => {
           setTrendingInfo((prev) => [
             ...prev,
             {
+              id: item._id,
               image: item.trendingImage.asset.url,
               categoryName: item.categoryName,
               heading: item.heading,
@@ -47,7 +49,7 @@ function TrendingInfo() {
   return (
     <>
       {trendingInfo.length != 0 && (
-        <Link to="/detail-trending-blog">
+        <Link to={`/detail-blog/${trendingInfo[0].id}`}>
           <article className="trending-container">
             <div>
               <img

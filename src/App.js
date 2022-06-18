@@ -51,7 +51,6 @@ import GetInTouchCoimbatore from './pages/get-in-touch-coimbatore'
 import BookNow from './pages/book-now'
 import Video from './components/video/video'
 import ImageGallery from './components/image-gallery/image-gallery'
-import DetailTrendingBlog from './pages/detailTrendingBlog'
 import DetailBlog from './pages/detailBlog'
 function App() {
   const [loading, setLoading] = useState(true)
@@ -80,11 +79,7 @@ function App() {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/outdoor" element={<Outdoor />} />
               <Route path="/blog" element={<Blog />} />
-              <Route path="/detail-blog" element={<DetailBlog />} />
-              <Route
-                path="/detail-trending-blog"
-                element={<DetailTrendingBlog />}
-              />
+              <Route path="/detail-blog/:id" element={<DetailBlog />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="/videos" element={<Videos />} />

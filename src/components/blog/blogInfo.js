@@ -8,6 +8,7 @@ function BlogInfo() {
     sanityClient
       .fetch(
         `*[_type == "blog"] {
+          _id,
         blogImage{
             asset->{
               url
@@ -17,6 +18,7 @@ function BlogInfo() {
         heading,
         nameofthewriter,
         designation,
+        detailBlogHeading,
         writerImage{
             asset->{
               url
@@ -29,6 +31,7 @@ function BlogInfo() {
           setBlogInfo((prev) => [
             ...prev,
             {
+              id: item._id,
               image: item.blogImage.asset.url,
               categoryName: item.categoryName,
               heading: item.heading,
@@ -47,7 +50,7 @@ function BlogInfo() {
       {blogInfo.length != 0 &&
         blogInfo.map((item, index) => {
           return (
-            <Link to="/detail-blog">
+            <Link to={`/detail-blog/${item.id}`}>
               <article key={index}>
                 <div className="mb-6">
                   <img

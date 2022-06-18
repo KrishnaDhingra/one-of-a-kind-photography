@@ -39,5 +39,16 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: 'detailBlogHeading',
+      title: 'Detail Blog Heading',
+      type: 'string',
+    },
+    {
+      name: 'subBlogs',
+      title: 'Sub Blogs',
+      type: 'array',
+      of: [{ type: 'subBlogs' }],
+    },
   ],
 }
