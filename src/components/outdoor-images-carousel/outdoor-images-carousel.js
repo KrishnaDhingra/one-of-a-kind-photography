@@ -11,6 +11,8 @@ import 'swiper/css/pagination'
 import { EffectCoverflow, Pagination } from 'swiper'
 
 function OutdoorImagesCarousel({ visible, hoverText, images, defaultHeading }) {
+  const history = useNavigate()
+
   const parentVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -21,7 +23,6 @@ function OutdoorImagesCarousel({ visible, hoverText, images, defaultHeading }) {
     },
   }
 
-  const history = useNavigate()
   const [selected, setSelected] = useState('')
 
   const [isVisible, setIsVisible] = useState(true)
@@ -42,6 +43,9 @@ function OutdoorImagesCarousel({ visible, hoverText, images, defaultHeading }) {
             // change this to items[activeIndex].text
             setSelected(hoverText[activeIndex])
           }}
+          onClick={() => {
+            history('/image-gallery')
+          }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -54,11 +58,9 @@ function OutdoorImagesCarousel({ visible, hoverText, images, defaultHeading }) {
         >
           {images.map((image, index) => {
             return (
-              <Link to="/image-gallery">
-                <SwiperSlide key={index}>
-                  <img src={image} />
-                </SwiperSlide>
-              </Link>
+              <SwiperSlide key={index}>
+                <img src={image} />
+              </SwiperSlide>
             )
           })}
         </Swiper>

@@ -26,8 +26,8 @@ function ImageGallery() {
   return (
     <section id="photos">
       {imageUrls.length !== 0 &&
-        imageUrls.map((item) => {
-          return <img src={item} alt="" />
+        imageUrls.map((item, index) => {
+          return <img key={index} src={item} alt="" />
         })}
     </section>
   )

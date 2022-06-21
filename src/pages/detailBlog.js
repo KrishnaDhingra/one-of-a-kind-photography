@@ -6,7 +6,6 @@ export default function DetailTrendingBlog() {
   const [blogHeading, setBlogHeading] = useState('')
   const { id } = useParams()
   useEffect(() => {
-    console.log(id)
     sanityClient
       .fetch(
         `*[_id == "${id}"] {

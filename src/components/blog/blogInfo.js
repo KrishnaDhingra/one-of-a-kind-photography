@@ -50,8 +50,8 @@ function BlogInfo() {
       {blogInfo.length != 0 &&
         blogInfo.map((item, index) => {
           return (
-            <Link to={`/detail-blog/${item.id}`}>
-              <article key={index}>
+            <Link to={`/detail-blog/${item.id}`} key={index}>
+              <article>
                 <div className="mb-6">
                   <img
                     className="w-full aspect-video object-cover rounded-[15px]"

@@ -12,6 +12,8 @@ import 'swiper/css/pagination'
 import { EffectCoverflow, Pagination } from 'swiper'
 
 function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
+  const history = useNavigate()
+
   const parentVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -21,8 +23,6 @@ function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
       },
     },
   }
-
-  const history = useNavigate()
 
   const [selected, setSelected] = useState('')
 
@@ -37,15 +37,14 @@ function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
           centeredSlides={true}
           centeredSlidesBounds={true}
           slidesPerView={'auto'}
-          // loop={true}
           spaceBetween={25}
           onSlideChange={({ activeIndex }) => {
             setIsVisible(false)
             // change this to this items[activeIndex].text
             setSelected(hoverText[activeIndex])
           }}
-          onSlideClick={() => {
-            console.log('hello')
+          onClick={() => {
+            history('/image-gallery')
           }}
           coverflowEffect={{
             rotate: 0,
@@ -59,11 +58,9 @@ function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
         >
           {images.map((image, index) => {
             return (
-              <Link to="/image-gallery">
-                <SwiperSlide key={index}>
-                  <img src={image} />
-                </SwiperSlide>
-              </Link>
+              <SwiperSlide key={index}>
+                <img src={image} />
+              </SwiperSlide>
             )
           })}
         </Swiper>
