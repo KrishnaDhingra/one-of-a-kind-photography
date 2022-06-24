@@ -6,6 +6,7 @@ import { FiTwitter } from 'react-icons/fi'
 import { AiOutlineYoutube } from 'react-icons/ai'
 import './careers.css'
 import sanityClient from '../../client'
+import { Helmet } from 'react-helmet'
 
 function Careers() {
   const [imageUrl, setImageUrl] = useState(null)
@@ -31,6 +32,23 @@ function Careers() {
 
   return (
     <main className="flex flex-col">
+      <Helmet>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>
+          Candid Wedding photography jobs in Chennai | Coimbatore | Bangalore
+        </title>
+        <meta
+          name="description"
+          content="Photography jobs: Are you searching for wedding photography jobs in chennai, Bangalore, Coimbatore? you came at a right place. One of a kind photography have openings in photography field"
+        />
+        <meta name="robots" content="max-image-preview:large" />
+        {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
+      </Helmet>
       <section className="jobs-top-section-container flex flex-col gap-12">
         <h1 className="jobs-heading text-center">Careers</h1>
         <div className="main-content px-8 md:px-0">

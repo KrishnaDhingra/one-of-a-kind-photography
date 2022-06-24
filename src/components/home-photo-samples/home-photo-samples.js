@@ -56,7 +56,7 @@ function HomePhotoSamplesContainer() {
                 <h3 className="content-heading font-medium text-[20px]">
                   {item.heading}
                 </h3>
-                <p className="content">{item.text}</p>
+                <p className="content text-justify">{item.text}</p>
               </div>
               <div className="sample-image-container">
                 {imageUrls && (

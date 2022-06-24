@@ -3,6 +3,7 @@ import WeddingImagesCarousel from '../components/wedding-images-carousel/wedding
 import ServicesMore from '../components/services-more/services-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
 import sanityClient from '../client'
+import { Helmet } from 'react-helmet'
 
 function Services() {
   const scrollRef = useRef()
@@ -36,6 +37,24 @@ function Services() {
   }, [])
   return (
     <div className="flex flex-col gap-4">
+      <Helmet>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>
+          Candid wedding photography services | Chennai | Bangalore | One of a
+          kind photography
+        </title>
+        <meta
+          name="description"
+          content="Wedding Photography services: Oneofakindphotography is offer the best wedding photography services in chennai, Bangalore, Coimbatore. OOAK specialized in candid wedding photography and more"
+        />
+        <meta name="robots" content="max-image-preview:large" />
+        {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
+      </Helmet>
       <WeddingImagesCarousel
         images={imageUrls}
         hoverText={hoverText}

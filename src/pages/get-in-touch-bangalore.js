@@ -4,6 +4,7 @@ import GetInTouch from '../components/get-in-touch/get-in-touch'
 import GetInTouchMap from '../components/get-in-touch-map/get-in-touch-map'
 import WeddingImagesCarousel from '../components/wedding-images-carousel/wedding-images-carousel'
 import sanityClient from '../client'
+import { Helmet } from 'react-helmet'
 function GetInTouchBangalore() {
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
@@ -30,6 +31,23 @@ function GetInTouchBangalore() {
   }, [])
   return (
     <main className="flex flex-col">
+      <Helmet>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>
+          Candid wedding Photographers in Bangalore | One of a Kind Photography
+        </title>
+        <meta
+          name="description"
+          content="Candid wedding photographer in chennai: One of a kind photography team have a Candid Wedding Photographers in Chennai, We are always looking forward to capturing your best moments in big day"
+        />
+        <meta name="robots" content="max-image-preview:large" />
+        {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
+      </Helmet>
       <GetInTouch location={'Banaswadi, Bangalore - 560033'} />
       <ContactForm />
       <GetInTouchMap
