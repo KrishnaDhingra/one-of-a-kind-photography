@@ -6,7 +6,7 @@ function WeddingFooter({ scrollIntoView }) {
   const relative_path = window.location.pathname
 
   return (
-    <footer className="relative wedding-footer justify-center justify-evenly mt-4 sm:mt-0 sm:gap-[0] sm:justify-between flex pb-8">
+    <footer className="relative wedding-footer justify-evenly mt-4 sm:mt-0 sm:gap-[0] sm:justify-between flex pb-8">
       {relative_path === '/wedding' ? (
         <Link to="/services">Services</Link>
       ) : (

@@ -110,7 +110,7 @@ const SideBar = ({ onSelect }) => {
       variants={item}
       className="popup-sidebar flex flex-col justify-between h-screen"
     >
-      <CgClose onClick={onSelect} className=" text-md" />
+      <CgClose onClick={onSelect} className="cursor-pointer text-md" />
       <div className="cursor-pointer flex flex-col gap-7 sidebar-bottom items-center">
         {/* <span className="sidebar-text  text-sm">
         Follow OOAK Photography
