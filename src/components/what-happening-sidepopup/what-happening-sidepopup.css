@@ -11,7 +11,7 @@
 }
 
 .popup-sidebar {
-  z-index: 100;
+  z-index: 999;
   flex-shrink: 0;
   padding: 1.5rem 1.5rem;
   width: max-content;

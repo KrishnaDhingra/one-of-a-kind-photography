@@ -60,24 +60,22 @@ function VideosImagesCarousel({
         >
           {images.map((image, index) => {
             return (
-              <Link to="/image-gallery">
-                <SwiperSlide
-                  key={index}
-                  onClick={() => {
-                    setHappilyIndexCounter(index)
-                    setHappilyVisible(true)
+              <SwiperSlide
+                key={index}
+                onClick={() => {
+                  setHappilyIndexCounter(index)
+                  setHappilyVisible(true)
+                }}
+              >
+                <motion.img
+                  transition={{
+                    ease: [0.6, 0.01, -0.05, 0.9],
+                    duration: 1.6,
                   }}
-                >
-                  <motion.img
-                    transition={{
-                      ease: [0.6, 0.01, -0.05, 0.9],
-                      duration: 1.6,
-                    }}
-                    layoutId="main-image"
-                    src={image}
-                  />
-                </SwiperSlide>
-              </Link>
+                  layoutId="main-image"
+                  src={image}
+                />
+              </SwiperSlide>
             )
           })}
         </Swiper>
