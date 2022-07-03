@@ -4,3 +4,13 @@
   display: inline-block;
   background-color: black;
 }
+.videos-close-icon {
+  z-index: 100;
+}
+@media only screen and (max-width: 600px) {
+  .videos-close-icon {
+    font-size: 1.35rem;
+    right: 4rem;
+    top: 2.3rem;
+  }
+}

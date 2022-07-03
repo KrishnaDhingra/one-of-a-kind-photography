@@ -54,7 +54,7 @@ function Navbar() {
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
                     text={'Wedding'}
-                    redirect={'/Wedding'}
+                    redirect={'/wedding'}
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}

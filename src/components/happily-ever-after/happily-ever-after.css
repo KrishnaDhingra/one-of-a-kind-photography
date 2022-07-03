@@ -1,5 +1,4 @@
 .happily-ever-after-image-container {
-  max-width: 550px;
   aspect-ratio: 16/10;
 }
 .happily-ever-after-image-container::before {

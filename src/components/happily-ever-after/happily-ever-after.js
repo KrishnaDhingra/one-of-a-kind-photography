@@ -36,7 +36,7 @@ function HappilyEverAfter({ images, documentIds, videoLinks, index }) {
           to={`/videos/${documentIds[indexCounter]}`}
           state={{ videoLink: videoLinks[indexCounter] }}
         >
-          <div className="cursor-pointer relative happily-ever-after-image-container">
+          <div className="cursor-pointer relative happily-ever-after-image-container max-w-[300px] sm:max-w-[550px]">
             <motion.img
               transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
               layoutId="main-image"
@@ -45,7 +45,7 @@ function HappilyEverAfter({ images, documentIds, videoLinks, index }) {
               alt="Happily Ever After Image"
             />
             <button className="play-button ">
-              <FaPlay className="text-[5rem]" />
+              <FaPlay className="text-[3rem] md:text-[5rem]" />
             </button>
           </div>
         </Link>
@@ -55,7 +55,7 @@ function HappilyEverAfter({ images, documentIds, videoLinks, index }) {
         />
       </section>
 
-      <h1 className="text-[36px] sm:text-[48px] font-semibold text-center mb-3">
+      <h1 className="text-[36px] sm:text-[48px] font-semibold text-center mb-20 sm:mb-3">
         Happily Ever After
       </h1>
     </div>

@@ -1,19 +1,31 @@
 import React from 'react'
 import './video.css'
-import { useLocation } from 'react-router-dom'
+import { CgClose } from 'react-icons/cg'
+import { useLocation, useNavigate } from 'react-router-dom'
 function Video() {
   const location = useLocation()
-  console.log(location)
+  const history = useNavigate()
+
   const { videoLink } = location.state
+
+  const redirect = () => {
+    history('/videos')
+  }
   return (
-    <iframe
-      id="video"
-      src={videoLink}
-      frameBorder="0"
-      allow="autoplay; encrypted-media"
-      allowFullScreen
-      title="video"
-    />
+    <>
+      <CgClose
+        onClick={redirect}
+        className="videos-close-icon cursor-pointer text-3xl absolute top-[2.1rem] right-[4.4rem] sm:top-[3.3rem] sm:right-[6rem]"
+      />
+      <iframe
+        id="video"
+        src={videoLink}
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="video"
+      />
+    </>
   )
 }
 export default Video

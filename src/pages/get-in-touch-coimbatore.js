@@ -48,7 +48,7 @@ function GetInTouchCoimbatore() {
         <meta name="robots" content="max-image-preview:large" />
         {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
       </Helmet>
-      <GetInTouch location={'Gandhi Nagar, Coimbatore - 641603'} />
+      <GetInTouch location={'Gandhipuram, Coimbatore - 641603'} />
       <ContactForm />
       <GetInTouchMap
         link={

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './wedding-images-carousel.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -40,11 +40,7 @@ function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
           spaceBetween={25}
           onSlideChange={({ activeIndex }) => {
             setIsVisible(false)
-            // change this to this items[activeIndex].text
             setSelected(hoverText[activeIndex])
-          }}
-          onClick={() => {
-            history('/image-gallery')
           }}
           coverflowEffect={{
             rotate: 0,
@@ -58,7 +54,12 @@ function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
         >
           {images.map((image, index) => {
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide
+                key={index}
+                onClick={() => {
+                  history('/image-gallery')
+                }}
+              >
                 <img src={image} />
               </SwiperSlide>
             )

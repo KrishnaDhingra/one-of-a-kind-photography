@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './book-now-slider.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper'
+import { Navigation, Pagination, Autoplay } from 'swiper'
 import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 import sanityClient from '../../client'
 
 function BookNowSlider() {
@@ -34,9 +35,11 @@ function BookNowSlider() {
       centeredSlidesBounds={true}
       slidesPerView={'auto'}
       spaceBetween={25}
-      pagination={true}
+      autoplay={{ delay: 2000 }}
+      navigation={true}
+      pagination={{ clickable: true }}
       direction={'horizontal'}
-      modules={[Pagination]}
+      modules={[Pagination, Navigation, Autoplay]}
       className="book-now-swiper"
     >
       {imageUrls.map((item, index) => {

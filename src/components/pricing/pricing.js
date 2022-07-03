@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import WhatYouGetChart from './what-you-get-chart'
+import { Link } from 'react-router-dom'
 import './pricing.css'
 
 function Pricing() {
@@ -62,7 +63,9 @@ function Pricing() {
             <p className="my-4 basic-package-points-heading">Inclusive of</p>
             <BasicPackagePoints />
 
-            <button className="basic-package-button">Book Now</button>
+            <Link to="/book-now">
+              <button className="basic-package-button">Book Now</button>
+            </Link>
           </div>
         </article>
 
@@ -74,7 +77,9 @@ function Pricing() {
               Everything in basic, Plus Best for covering all Events
             </p>
             <CustomizedPackagePoints />
-            <button>Get Quote</button>
+            <Link to="/book-now">
+              <button>Get Quote</button>
+            </Link>
           </div>
         </article>
       </motion.section>
