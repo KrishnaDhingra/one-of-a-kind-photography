@@ -10,7 +10,13 @@ import 'swiper/css/pagination'
 
 import { EffectCoverflow, Pagination } from 'swiper'
 
-function OutdoorImagesCarousel({ visible, hoverText, images, defaultHeading }) {
+function OutdoorImagesCarousel({
+  visible,
+  hoverText,
+  images,
+  defaultHeading,
+  imageGalleriesId,
+}) {
   const history = useNavigate()
 
   const parentVariants = {
@@ -58,7 +64,7 @@ function OutdoorImagesCarousel({ visible, hoverText, images, defaultHeading }) {
               <SwiperSlide
                 key={index}
                 onClick={() => {
-                  history('/image-gallery')
+                  history(`/image-gallery/${imageGalleriesId[index]}`)
                 }}
               >
                 <img src={image} />
@@ -89,7 +95,9 @@ function OutdoorImagesCarousel({ visible, hoverText, images, defaultHeading }) {
                   setSelected(hoverText[index])
                 }}
                 onMouseLeave={() => setIsVisible(true)}
-                onClick={() => history('/image-gallery')}
+                onClick={() => {
+                  history(`/image-gallery/${imageGalleriesId[index]}`)
+                }}
                 whileHover={{
                   width: '220px',
                   transition: { duration: 0.4 },

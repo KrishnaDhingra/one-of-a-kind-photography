@@ -78,16 +78,6 @@ function Navbar() {
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
-                    text={'FAQ'}
-                    redirect={'/faq'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Blogs'}
-                    redirect={'/blog'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
                     text={'Jobs'}
                     redirect={'/careers'}
                   />

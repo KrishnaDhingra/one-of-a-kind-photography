@@ -11,7 +11,13 @@ import 'swiper/css/pagination'
 
 import { EffectCoverflow, Pagination } from 'swiper'
 
-function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
+function WeddingImagesCarousel({
+  visible,
+  hoverText,
+  images,
+  imageGalleriesId,
+  defaultHeading,
+}) {
   const history = useNavigate()
 
   const parentVariants = {
@@ -57,7 +63,7 @@ function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
               <SwiperSlide
                 key={index}
                 onClick={() => {
-                  history('/image-gallery')
+                  history(`/image-gallery/${imageGalleriesId[index]}`)
                 }}
               >
                 <img src={image} />
@@ -92,7 +98,9 @@ function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
                   width: '200px',
                   transition: { duration: 0.4 },
                 }}
-                onClick={() => history('/image-gallery')}
+                onClick={() => {
+                  history(`/image-gallery/${imageGalleriesId[index]}`)
+                }}
                 className="wedding-image"
                 style={{
                   backgroundImage: `url(${image})`,

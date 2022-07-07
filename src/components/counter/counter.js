@@ -35,7 +35,7 @@ function Counter() {
         <h1 className="counter" data-target="120">
           120
         </h1>
-        <p>ProjectS Completed</p>
+        <p>Projects Completed</p>
       </div>
       <div>
         <h1 className="counter" data-target="100">

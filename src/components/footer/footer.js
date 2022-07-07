@@ -68,11 +68,11 @@ function Footer() {
                 </a>
               </span>
             </div>
-            <a href="#">
+            <a href="mailto:vikas@ooak.photography" target="_blank">
               <IoMailOpen />
               <span>vikas@ooak.photography</span>
             </a>
-            <a href="#">
+            <a href="tel:+917788995566" target="_blank">
               <BsFillTelephoneFill />
               <span>+91 77889 95566</span>
             </a>
@@ -82,6 +82,8 @@ function Footer() {
           <h3>Quick Links</h3>
           <div>
             {[
+              { text: 'FAQ', redirect: 'faq' },
+              { text: 'Blogs', redirect: 'blog' },
               { text: 'Weddings', redirect: 'wedding' },
               { text: 'Services', redirect: 'services' },
               { text: 'Gallery', redirect: 'gallery' },

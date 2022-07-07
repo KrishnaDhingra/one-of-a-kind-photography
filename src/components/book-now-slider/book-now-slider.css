@@ -21,3 +21,9 @@
   border-radius: 0.3rem;
   aspect-ratio: 16 / 13;
 }
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: black;
+  font-size: 1.9rem !important;
+  font-weight: 600;
+}

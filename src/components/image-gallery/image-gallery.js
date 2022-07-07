@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import './image-gallery.css'
 import sanityClient from '../../client'
+import { useParams } from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 function ImageGallery() {
   const [imageUrls, setImageUrls] = useState([])
-
+  const { id } = useParams()
   useEffect(() => {
     let cancel = false
     sanityClient
       .fetch(
-        `*[_type == "imageGallery"] {
-          mainImage{
-              asset->{
-                url
-              }
-          },
+        `*[_id == "${id}"] {
+          image[]{
+            asset->{
+              url
+            }
+          }
       }`,
       )
       .then((data) => {
         if (cancel) return
-        data.forEach((item) => {
-          setImageUrls((prev) => [...prev, item.mainImage.asset.url])
-        })
+        console.log(data[0].image)
+        setImageUrls(data[0].image)
       })
       .catch((error) => {
         console.log(error)
@@ -41,7 +41,7 @@ function ImageGallery() {
             <LazyLoadImage
               key={index}
               alt={`Image gallery Photograph${index}`}
-              src={item}
+              src={item.asset.url}
               width="100%"
               height="100%"
             />

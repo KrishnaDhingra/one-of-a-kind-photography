@@ -14,6 +14,7 @@ function Services() {
 
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
+  const [imageGalleriesId, setImageGalleriesId] = useState([])
 
   useEffect(() => {
     sanityClient
@@ -24,13 +25,17 @@ function Services() {
             url
           }
       },
-      hoverText
+      hoverText,
+      imageGallery->{
+        _id
+      }
   }`,
       )
       .then((data) => {
         data.forEach((item) => {
           setImageUrls((prev) => [...prev, item.mainImage.asset.url])
           setHoverText((prev) => [...prev, item.hoverText])
+          setImageGalleriesId((prev) => [...prev, item.imageGallery._id])
         })
       })
       .catch(console.log)
@@ -59,6 +64,7 @@ function Services() {
         images={imageUrls}
         hoverText={hoverText}
         defaultHeading={'Services'}
+        imageGalleriesId={imageGalleriesId}
       />
       <WeddingFooter scrollIntoView={scrollIntoView} />
       <ServicesMore scrollRef={scrollRef} />

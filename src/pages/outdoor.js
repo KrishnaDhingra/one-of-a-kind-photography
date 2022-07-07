@@ -14,6 +14,7 @@ function Outdoor() {
 
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
+  const [imageGalleriesId, setImageGalleriesId] = useState([])
 
   useEffect(() => {
     sanityClient
@@ -24,13 +25,17 @@ function Outdoor() {
             url
           }
       },
-      hoverText
+      hoverText,
+      imageGallery->{
+        _id
+      }
   }`,
       )
       .then((data) => {
         data.forEach((item) => {
           setImageUrls((prev) => [...prev, item.mainImage.asset.url])
           setHoverText((prev) => [...prev, item.hoverText])
+          setImageGalleriesId((prev) => [...prev, item.imageGallery._id])
         })
       })
       .catch(console.log)
@@ -58,6 +63,7 @@ function Outdoor() {
         images={imageUrls}
         hoverText={hoverText}
         defaultHeading={'Outdoor'}
+        imageGalleriesId={imageGalleriesId}
       />
       <WeddingFooter scrollIntoView={scrollIntoView} />
       <OutdoorMore scrollRef={scrollRef} />

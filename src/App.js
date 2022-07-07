@@ -85,7 +85,7 @@ function App() {
               <Route path="/videos" element={<Videos />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/book-now" element={<BookNow />} />
-              <Route path="/image-gallery" element={<ImageGallery />} />
+              <Route path="/image-gallery/:id" element={<ImageGallery />} />
               <Route
                 path="/get-in-touch-chennai"
                 element={<GetInTouchChennai />}
@@ -101,7 +101,9 @@ function App() {
               <Route path="/videos/:id" element={<Video />} />
             </Routes>
             <Footer />
-            <BsWhatsapp className="fixed-whatsapp-icon text-white bg-green-600 rounded-full text-[4rem] p-4" />
+            <a href="https://wa.me/+917788995566" target="_blank">
+              <BsWhatsapp className="fixed-whatsapp-icon text-white bg-green-600 rounded-full text-[4rem] p-4" />
+            </a>
           </>
         )}
       </AnimatePresence>

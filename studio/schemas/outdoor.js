@@ -16,5 +16,11 @@ export default {
       title: 'Hover Text',
       type: 'string',
     },
+    {
+      name: 'imageGallery',
+      title: 'Image Gallery',
+      type: 'reference',
+      to: { type: 'imageGallery' },
+    },
   ],
 }

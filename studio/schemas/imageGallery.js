@@ -1,15 +1,13 @@
 export default {
   name: 'imageGallery',
-  title: 'Image Gallery Image',
+  title: 'Image Galleries',
   type: 'document',
   fields: [
     {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'image',
+      title: 'Image',
+      type: 'array',
+      of: [{ type: 'image' }],
     },
   ],
 }

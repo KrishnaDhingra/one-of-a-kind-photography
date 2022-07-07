@@ -13,7 +13,7 @@ function Wedding() {
   }
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
-
+  const [imageGalleriesId, setImageGalleriesId] = useState([])
   useEffect(() => {
     sanityClient
       .fetch(
@@ -23,13 +23,18 @@ function Wedding() {
             url
           }
       },
-      hoverText
+      hoverText,
+      imageGallery->{
+        _id
+      }
   }`,
       )
       .then((data) => {
         data.forEach((item) => {
+          console.log(item.imageGallery._id)
           setImageUrls((prev) => [...prev, item.mainImage.asset.url])
           setHoverText((prev) => [...prev, item.hoverText])
+          setImageGalleriesId((prev) => [...prev, item.imageGallery._id])
         })
       })
       .catch(console.log)
@@ -58,6 +63,7 @@ function Wedding() {
       <WeddingImagesCarousel
         images={imageUrls}
         hoverText={hoverText}
+        imageGalleriesId={imageGalleriesId}
         defaultHeading={'Wedding'}
       />
       <WeddingFooter scrollIntoView={scrollIntoView} />
