@@ -4,7 +4,10 @@ import { motion } from 'framer-motion'
 const Backdrop = ({ children, onSelect }) => {
   return (
     <motion.div
-      onClick={() => onSelect()}
+      onClick={(e) => {
+        onSelect()
+        e.stopPropagation()
+      }}
       className="top-0 left-0 backdrop z-10 fixed w-screen h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
