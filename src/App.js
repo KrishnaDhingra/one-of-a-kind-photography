@@ -102,7 +102,7 @@ function App() {
             </Routes>
             <Footer />
             <a href="https://wa.me/+917788995566" target="_blank">
-              <BsWhatsapp className="fixed-whatsapp-icon text-white bg-green-600 rounded-full text-[4rem] p-4" />
+              <BsWhatsapp className="fixed top-[95vh] sm:top-[85vh] right-[30px] sm:right-[50px] fixed-whatsapp-icon text-white bg-green-600 rounded-full text-[3rem] sm:text-[4rem] p-2 sm:p-4" />
             </a>
           </>
         )}

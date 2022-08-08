@@ -43,7 +43,7 @@ function Enter() {
         <motion.div variants={Top} className="top"></motion.div>
         <motion.div variants={Bottom} className="bottom"></motion.div>
         <motion.img
-          className="w-[380px]"
+          className="w-[320px] sm:w-[380px]"
           variants={Center}
           src={EnterImage}
           alt="Ooak Image"
