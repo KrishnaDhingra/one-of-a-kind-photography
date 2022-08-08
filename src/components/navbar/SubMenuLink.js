@@ -3,7 +3,7 @@ import { IoIosArrowBack } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { itemVariants } from './itemVariants'
-function SubMenuLink({ onClick, redirect, text }) {
+function SubMenuLink({ onClick, mainLink, subLinks }) {
   const [subMenuVisible, setSubMenuVisible] = useState(false)
 
   const parentVariants = {
@@ -24,12 +24,20 @@ function SubMenuLink({ onClick, redirect, text }) {
   return (
     <div className="flex flex-col relative">
       <motion.li
-        onClick={() => setSubMenuVisible(!subMenuVisible)}
-        className="font-semibold flex gap-4"
+        className="font-semibold flex gap-4 cursor-pointer"
         variants={itemVariants()}
       >
-        <span className="font-medium">{text}</span>
-        <IoIosArrowBack className="hover:text-gray-600 -rotate-90" />
+        {mainLink.redirect ? (
+          <Link to={mainLink.redirect} className="font-medium">
+            {mainLink.text}
+          </Link>
+        ) : (
+          <span className="font-medium">{mainLink.text}</span>
+        )}
+        <IoIosArrowBack
+          className="hover:text-gray-600 -rotate-90"
+          onClick={() => setSubMenuVisible(!subMenuVisible)}
+        />
       </motion.li>
       <AnimatePresence>
         {subMenuVisible && (
@@ -40,7 +48,7 @@ function SubMenuLink({ onClick, redirect, text }) {
             exit="exit"
             className="relative sm:absolute top-[130%] sm:left-[-20%] flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
           >
-            {['Chennai', 'Coimbatore', 'Bangalore'].map((item, index) => {
+            {subLinks.map((item, index) => {
               return (
                 <motion.div
                   onClick={onClick}
@@ -48,7 +56,7 @@ function SubMenuLink({ onClick, redirect, text }) {
                   className="text-xs text-center"
                   variants={itemVariants()}
                 >
-                  <Link to={`get-in-touch-${item.toLowerCase()}`}>{item}</Link>
+                  <Link to={item.redirect}>{item.text}</Link>
                 </motion.div>
               )
             })}

@@ -14,8 +14,5 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(168, 168, 168);
-}
-.happily-ever-after-image-container:hover .play-button {
-  color: rgb(114, 114, 114);
+  color: white;
 }

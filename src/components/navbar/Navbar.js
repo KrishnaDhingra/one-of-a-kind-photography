@@ -41,40 +41,19 @@ function Navbar() {
                     text={'About us'}
                     redirect={'/aboutus'}
                   />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Services'}
+                    redirect={'/services'}
+                  />
                   <SubMenuLink
                     onClick={toggleNavbarVisibility}
-                    text={'Location'}
-                    redirect={'/'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Gallery'}
-                    redirect={'/gallery'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Wedding'}
-                    redirect={'/wedding'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Outdoor'}
-                    redirect={'/outdoor'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Videos'}
-                    redirect={'/videos'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Pricing'}
-                    redirect={'/pricing'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Book Now'}
-                    redirect={'/book-now'}
+                    mainLink={{ text: 'Gallery', redirect: '/gallery' }}
+                    subLinks={[
+                      { text: 'Wedding', redirect: '/wedding' },
+                      { text: 'Outdoor', redirect: '/outdoor' },
+                      { text: 'Videos', redirect: '/videos' },
+                    ]}
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
@@ -83,8 +62,28 @@ function Navbar() {
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
-                    text={'Services'}
-                    redirect={'/services'}
+                    text={'Pricing'}
+                    redirect={'/pricing'}
+                  />
+                  <SubMenuLink
+                    onClick={toggleNavbarVisibility}
+                    mainLink={{ text: 'Location', redirect: null }}
+                    subLinks={[
+                      { text: 'Chennai', redirect: '/get-in-touch-chennai' },
+                      {
+                        text: 'Coimbatore',
+                        redirect: '/get-in-touch-coimbatore',
+                      },
+                      {
+                        text: 'Bangalore',
+                        redirect: '/get-in-touch-bangalore',
+                      },
+                    ]}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Book Now'}
+                    redirect={'/book-now'}
                   />
                 </section>
               </motion.ul>

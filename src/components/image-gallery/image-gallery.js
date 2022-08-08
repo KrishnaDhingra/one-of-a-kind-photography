@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import './image-gallery.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper'
+import { Navigation, Keyboard } from 'swiper'
 import 'swiper/css/navigation'
+import 'swiper/css/keyboard'
 import 'swiper/css'
 import sanityClient from '../../client'
 import { AnimatePresence } from 'framer-motion'
 import { useParams } from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import SampleImage from '../../utilities/sidebar-image.png'
 import Backdrop from '../backdrop'
 
 function ImageGallery() {
@@ -68,8 +68,9 @@ function ImageGallery() {
           <Backdrop onSelect={toggleSliderVisible}>
             <div onClick={(e) => e.stopPropagation()}>
               <Swiper
+                keyboard={true}
                 navigation={true}
-                modules={[Navigation]}
+                modules={[Navigation, Keyboard]}
                 initialSlide={selectedImage}
                 className="image-gallery-swiper"
               >

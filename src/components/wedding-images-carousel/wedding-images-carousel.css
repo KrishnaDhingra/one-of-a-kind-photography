@@ -14,23 +14,6 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.wedding-image::after,
-.videos-image::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(204, 204, 204, 0.4);
-  -webkit-transition: background-color 0.4s;
-  -ms-transition: background-color 0.4s;
-  transition: background-color 0.4s;
-}
-.wedding-image:hover::after,
-.videos-image:hover::after {
-  background-color: transparent;
-}
 
 .wedding-image:nth-child(even),
 .videos-image:nth-child(even) {
