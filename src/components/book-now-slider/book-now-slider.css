@@ -23,7 +23,7 @@
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  color: black;
+  color: white;
   font-size: 1.9rem !important;
   font-weight: 600;
 }

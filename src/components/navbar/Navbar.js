@@ -115,7 +115,7 @@ function Navbar() {
           </div>
           <Link to="/">
             <div className="logo" onClick={() => setNavbarVisible(false)}>
-              <img className="max-w-[9rem]" src={NavbarLogo} alt="" />
+              <img className="max-w-[7.7rem]" src={NavbarLogo} alt="" />
             </div>
           </Link>
           <div

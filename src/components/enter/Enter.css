@@ -2,7 +2,8 @@
   --bar-width: max(32px, 5vw);
 }
 .enter-content .right,
-.enter-content .left .enter-content .top,
+.enter-content .left,
+.enter-content .top,
 .enter-content .bottom {
   position: absolute;
   background-color: white;

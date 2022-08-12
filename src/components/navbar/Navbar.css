@@ -1,6 +1,5 @@
 nav {
   background-color: transparent;
-  /* position: relative; */
 }
 nav ul {
   z-index: -1;
@@ -8,7 +7,7 @@ nav ul {
   width: 100vw;
   background-color: var(--main-bg-color);
   display: flex;
-  height: 18rem;
+  height: 15rem;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 2rem;
@@ -58,15 +57,15 @@ nav section {
 .hamburger .line3 {
   height: 0.71rem;
 }
-@media only screen and (min-width: 850px) {
-  nav ul li a span,
-  nav ul li span {
-    font-size: clamp(1rem, 1vw, 1.2rem);
-  }
+nav ul li a span,
+nav ul li span,
+nav ul li a {
+  font-size: clamp(1.1rem, 1.1vw, 1.3rem);
 }
 @media only screen and (max-width: 850px) {
   nav ul li a span,
-  nav ul li span {
+  nav ul li span,
+  nav ul li a {
     font-size: 1.3rem;
   }
   nav ul {
@@ -83,7 +82,8 @@ nav section {
 }
 @media only screen and (max-width: 600px) {
   nav ul li a span,
-  nav ul li span {
+  nav ul li span,
+  nav ul li a {
     font-size: 1rem;
   }
   .hamburger,

@@ -16,8 +16,8 @@
   margin-bottom: 2rem;
 }
 .image-gallery-swiper {
-  width: min(auto, 90%);
-  height: auto;
+  width: auto;
+  max-height: 90%;
   position: absolute;
   left: 50%;
   top: 50%;

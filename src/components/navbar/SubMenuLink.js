@@ -53,7 +53,7 @@ function SubMenuLink({ onClick, mainLink, subLinks }) {
                 <motion.div
                   onClick={onClick}
                   key={index}
-                  className="text-xs text-center"
+                  className="text-sm text-center"
                   variants={itemVariants()}
                 >
                   <Link to={item.redirect}>{item.text}</Link>
