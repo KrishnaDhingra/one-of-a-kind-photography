@@ -155,4 +155,5 @@ section {
   position: fixed;
   top: 85vh;
   right: 50px;
+  box-sizing: border-box;
 }

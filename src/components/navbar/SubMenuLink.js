@@ -28,7 +28,11 @@ function SubMenuLink({ onClick, mainLink, subLinks }) {
         variants={itemVariants()}
       >
         {mainLink.redirect ? (
-          <Link to={mainLink.redirect} className="font-medium">
+          <Link
+            onClick={onClick}
+            to={mainLink.redirect}
+            className="font-medium"
+          >
             {mainLink.text}
           </Link>
         ) : (
@@ -53,7 +57,7 @@ function SubMenuLink({ onClick, mainLink, subLinks }) {
                 <motion.div
                   onClick={onClick}
                   key={index}
-                  className="text-sm text-center"
+                  className="text-sm text-center bg-[#add8e6]"
                   variants={itemVariants()}
                 >
                   <Link to={item.redirect}>{item.text}</Link>

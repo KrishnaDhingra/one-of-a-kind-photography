@@ -48,24 +48,24 @@ function Footer() {
             <div className="flex gap-[1.5rem]">
               <BsMailbox2 className="shrink-0" />
               <span className="flex gap-[0.5rem]">
-                <a
+                <Link
                   className="inline-block pr-3"
-                  href="https://goo.gl/maps/Qt35tx4VMqgZpD9b6"
+                  to={'/get-in-touch-chennai'}
                 >
                   Chennai
-                </a>
-                <a
+                </Link>
+                <Link
                   className="inline-block pr-3"
-                  href="https://goo.gl/maps/mXtySYyDnHYbqMRb6"
+                  to={'/get-in-touch-coimbatore'}
                 >
                   Coimbatore
-                </a>
-                <a
-                  className="inline-block"
-                  href="https://goo.gl/maps/mXtySYyDnHYbqMRb6"
+                </Link>
+                <Link
+                  className="inline-block pr-3"
+                  to={'/get-in-touch-bangalore'}
                 >
                   Bangalore
-                </a>
+                </Link>
               </span>
             </div>
             <a href="mailto:vikas@ooak.photography" target="_blank">

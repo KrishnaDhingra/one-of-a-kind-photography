@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import './image-gallery.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Keyboard } from 'swiper'
@@ -52,6 +53,7 @@ function ImageGallery() {
         imageUrls.map((item, index) => {
           return (
             <LazyLoadImage
+              key={index}
               onClick={() => {
                 setSelectedImage(index)
                 setSliderVisible(true)
@@ -65,7 +67,16 @@ function ImageGallery() {
         })}
       <AnimatePresence>
         {sliderVisible && (
-          <Backdrop onSelect={toggleSliderVisible}>
+          <motion.div
+            onClick={(e) => {
+              toggleSliderVisible()
+              e.stopPropagation()
+            }}
+            className="top-0 left-0 backdrop-dark z-10 fixed w-screen h-screen"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             <div onClick={(e) => e.stopPropagation()}>
               <Swiper
                 keyboard={true}
@@ -76,14 +87,17 @@ function ImageGallery() {
               >
                 {imageUrls.map((item, index) => {
                   return (
-                    <SwiperSlide className="image-gallery-swiper-slide">
+                    <SwiperSlide
+                      key={index}
+                      className="image-gallery-swiper-slide"
+                    >
                       <img src={item.asset.url} alt={`Slider Image ${index}`} />
                     </SwiperSlide>
                   )
                 })}
               </Swiper>
             </div>
-          </Backdrop>
+          </motion.div>
         )}
       </AnimatePresence>
     </section>

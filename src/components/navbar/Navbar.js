@@ -46,15 +46,6 @@ function Navbar() {
                     text={'Services'}
                     redirect={'/services'}
                   />
-                  <SubMenuLink
-                    onClick={toggleNavbarVisibility}
-                    mainLink={{ text: 'Gallery', redirect: '/gallery' }}
-                    subLinks={[
-                      { text: 'Wedding', redirect: '/wedding' },
-                      { text: 'Outdoor', redirect: '/outdoor' },
-                      { text: 'Videos', redirect: '/videos' },
-                    ]}
-                  />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
                     text={'Jobs'}
@@ -64,6 +55,20 @@ function Navbar() {
                     onClick={toggleNavbarVisibility}
                     text={'Pricing'}
                     redirect={'/pricing'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Book Now'}
+                    redirect={'/book-now'}
+                  />
+                  <SubMenuLink
+                    onClick={toggleNavbarVisibility}
+                    mainLink={{ text: 'Gallery', redirect: '/gallery' }}
+                    subLinks={[
+                      { text: 'Wedding', redirect: '/wedding' },
+                      { text: 'Outdoor', redirect: '/outdoor' },
+                      { text: 'Videos', redirect: '/videos' },
+                    ]}
                   />
                   <SubMenuLink
                     onClick={toggleNavbarVisibility}
@@ -79,11 +84,6 @@ function Navbar() {
                         redirect: '/get-in-touch-bangalore',
                       },
                     ]}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Book Now'}
-                    redirect={'/book-now'}
                   />
                 </section>
               </motion.ul>

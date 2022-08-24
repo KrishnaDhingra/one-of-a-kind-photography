@@ -42,6 +42,12 @@
   width: 180px !important;
   height: 50vh !important;
 }
+.mySwiper .swiper-slide:first-child {
+  margin-left: 7rem;
+}
+.mySwiper .swiper-slide:last-child {
+  margin-right: 7rem;
+}
 .mySwiper .swiper-slide::before {
   content: '';
   position: absolute;
@@ -56,5 +62,6 @@
 .mySwiper .swiper-slide img {
   display: block;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }

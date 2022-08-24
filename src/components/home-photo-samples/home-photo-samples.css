@@ -30,7 +30,8 @@
 .samples-inner .sample-image-container {
   height: 100%;
 }
-.sample-image-container img {
+.sample-image-container img,
+.sample-image-container div {
   height: 100%;
   max-width: 300px;
   margin-left: auto;

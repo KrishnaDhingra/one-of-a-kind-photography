@@ -26,7 +26,7 @@ function HappilyEverAfter({ images, documentIds, videoLinks, index }) {
     setIndexCounter(images.length - 1)
   }
   return (
-    <div className="flex flex-col gap-20 mt-[5rem]">
+    <div className="flex flex-col gap-20 mt-[4rem]">
       <section className="mx-auto max-w-[1300px] w-[95%] flex justify-between items-center">
         <IoIosArrowBack
           onClick={previous}
@@ -55,7 +55,7 @@ function HappilyEverAfter({ images, documentIds, videoLinks, index }) {
         />
       </section>
 
-      <h1 className="text-[36px] sm:text-[48px] font-semibold text-center mb-20 sm:mb-3">
+      <h1 className="text-[36px] sm:text-[42px] font-semibold text-center mb-20 sm:mb-3">
         Happily Ever After
       </h1>
     </div>
