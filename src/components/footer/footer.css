@@ -10,7 +10,7 @@
 }
 .footer-top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1.4fr 1fr;
 }
 .footer-top h3 {
   font-weight: 500;
@@ -32,6 +32,8 @@
 }
 .footer-top > *:nth-child(1) p,
 .footer-top > *:nth-child(2) div span,
+.footer-top > *:nth-child(2) div ul li,
+.footer-top > *:nth-child(2) div ul li a,
 .footer-top > *:nth-child(3) div a,
 .bottom .copyright,
 .bottom div a {

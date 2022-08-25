@@ -44,33 +44,29 @@ function Footer() {
         </div>
         <div>
           <h3>Contacts</h3>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-6">
             <div className="flex gap-[1.5rem]">
               <BsMailbox2 className="shrink-0" />
-              <span className="flex gap-[0.5rem]">
-                <Link
-                  className="inline-block pr-3"
-                  to={'/get-in-touch-chennai'}
-                >
-                  Chennai |
-                </Link>
-                <Link
-                  className="inline-block pr-3"
-                  to={'/get-in-touch-coimbatore'}
-                >
-                  Coimbatore |
-                </Link>
-                <Link
-                  className="inline-block pr-3"
-                  to={'/get-in-touch-bangalore'}
-                >
-                  Bangalore |
-                </Link>
-                <br></br>
-                {/* <p>Hyderabad |</p>
-                <p>Malaysia | </p>
-                <p>United States</p> */}
-              </span>
+              <ul className="flex flex-wrap gap-[0.5rem]">
+                <li>
+                  <Link className="ml-0" to={'/get-in-touch-chennai'}>
+                    Chennai |
+                  </Link>
+                </li>
+                <li>
+                  <Link className="ml-0" to={'/get-in-touch-coimbatore'}>
+                    Coimbatore |
+                  </Link>
+                </li>
+                <li>
+                  <Link className="ml-0" to={'/get-in-touch-bangalore'}>
+                    Bangalore |
+                  </Link>
+                </li>
+                <li className="ml-0">Hyderabad |</li>
+                <li className="ml-0"> Malaysia |</li>
+                <li className="ml-0"> United States</li>
+              </ul>
             </div>
             <a href="mailto:vikas@ooak.photography" target="_blank">
               <IoMailOpen />
