@@ -8,7 +8,7 @@ function OutdoorMore({ scrollRef }) {
         Natural lights always add a magical kick to a photograph. To experience
         the magical touch of nature in your photographs, we always plan outdoor
         photography in the most exotic locations to experience a wow factor on
-        every photograph clicked. From Pre- wedding to Maternity shoots, any
+        every photograph clicked. From Pre - wedding to Maternity shoots, any
         event can be brilliantly spiced up with outdoor shoots.
       </p>
     </section>

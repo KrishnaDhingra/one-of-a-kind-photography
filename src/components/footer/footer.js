@@ -52,20 +52,24 @@ function Footer() {
                   className="inline-block pr-3"
                   to={'/get-in-touch-chennai'}
                 >
-                  Chennai
+                  Chennai |
                 </Link>
                 <Link
                   className="inline-block pr-3"
                   to={'/get-in-touch-coimbatore'}
                 >
-                  Coimbatore
+                  Coimbatore |
                 </Link>
                 <Link
                   className="inline-block pr-3"
                   to={'/get-in-touch-bangalore'}
                 >
-                  Bangalore
+                  Bangalore |
                 </Link>
+                <br></br>
+                {/* <p>Hyderabad |</p>
+                <p>Malaysia | </p>
+                <p>United States</p> */}
               </span>
             </div>
             <a href="mailto:vikas@ooak.photography" target="_blank">

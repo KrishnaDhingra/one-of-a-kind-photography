@@ -8,8 +8,8 @@ function WeddingMore({ scrollRef }) {
         Indian weddings are festivals of color, in a diverse nation like India
         even the weddings are diverse so our photographs are. We capture all
         types of weddings from Christian weddings, Hindu weddings, Muslim
-        weddings, Punjabi weddings, Tamil weddings, Kannadika weddings, Sikh
-        weddings, Telegu weddings, etc., and whatnot. Make sure we capture all
+        weddings, Punjabi weddings, Tamil weddings, Kannadiga weddings, Sikh
+        weddings, Telugu weddings, etc., and whatnot. Make sure we capture all
         the important events of your wedding in the way you want.
       </p>
     </section>

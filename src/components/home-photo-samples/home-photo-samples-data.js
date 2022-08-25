@@ -7,7 +7,7 @@ export const data = [
   {
     heading: 'Maternity shoot',
     text:
-      'A woman feels complete only when she attains motherhood. Pink lines to painful labor is a beautiful journey of the mother and child. A bond that could never be explained. The gift of pregnancy is to be celebrated, catered to, take extra special care of, and most of all captured in a maternity photo shoot. ',
+      'A woman feels complete only when she attains motherhood. Pink lines to painful labor is a beautiful journey of the mother and child. A bond that could never be explained. The gift of pregnancy is to be celebrated, catered to, taken extra special care of, and most of all captured in a maternity photo shoot. ',
   },
   {
     heading: 'Birth Photography',

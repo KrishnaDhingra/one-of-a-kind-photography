@@ -46,20 +46,20 @@ function Navbar() {
                     text={'Services'}
                     redirect={'/services'}
                   />
+                    <NavbarLink
+                      onClick={toggleNavbarVisibility}
+                      text={'Pricing'}
+                      redirect={'/pricing'}
+                    />
+                    <NavbarLink
+                      onClick={toggleNavbarVisibility}
+                      text={'Book Now'}
+                      redirect={'/book-now'}
+                    />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
                     text={'Jobs'}
                     redirect={'/careers'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Pricing'}
-                    redirect={'/pricing'}
-                  />
-                  <NavbarLink
-                    onClick={toggleNavbarVisibility}
-                    text={'Book Now'}
-                    redirect={'/book-now'}
                   />
                   <SubMenuLink
                     onClick={toggleNavbarVisibility}

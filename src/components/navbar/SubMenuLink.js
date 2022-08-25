@@ -50,14 +50,14 @@ function SubMenuLink({ onClick, mainLink, subLinks }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative sm:absolute top-[130%] sm:left-[-20%] flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
+            className="relative sm:absolute top-[130%] left-[5%] flex flex-col px-6 pb-4 my-3 sm:my-0 gap-3  bg-[#add8e6]"
           >
             {subLinks.map((item, index) => {
               return (
                 <motion.div
                   onClick={onClick}
                   key={index}
-                  className="text-sm text-center bg-[#add8e6]"
+                  className="text-sm text-center"
                   variants={itemVariants()}
                 >
                   <Link to={item.redirect}>{item.text}</Link>

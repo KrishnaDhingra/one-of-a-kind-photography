@@ -96,7 +96,11 @@ function ImageGallery() {
                       key={index}
                       className="image-gallery-swiper-slide"
                     >
-                      <img src={item.asset.url} alt={`Slider Image ${index}`} />
+                      <img
+                        loading="lazy"
+                        src={item.asset.url}
+                        alt={`Slider Image ${index}`}
+                      />
                     </SwiperSlide>
                   )
                 })}
