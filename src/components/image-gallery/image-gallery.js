@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { CgClose } from 'react-icons/cg'
 import './image-gallery.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Keyboard } from 'swiper'
@@ -77,6 +78,10 @@ function ImageGallery() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
+            <CgClose
+              onClick={toggleSliderVisible}
+              className="videos-close-icon cursor-pointer text-3xl absolute top-[2.1rem] right-[4.4rem] sm:top-[2.7rem] sm:right-[6rem] text-white"
+            />
             <div onClick={(e) => e.stopPropagation()}>
               <Swiper
                 keyboard={true}

@@ -15,7 +15,7 @@ function Video() {
     <>
       <CgClose
         onClick={redirect}
-        className="videos-close-icon cursor-pointer text-3xl absolute top-[2.1rem] right-[4.4rem] sm:top-[3.3rem] sm:right-[6rem]"
+        className="videos-close-icon cursor-pointer text-3xl absolute top-[2.1rem] right-[4.4rem] sm:top-[2.7rem] sm:right-[6rem]"
       />
       <iframe
         id="video"
