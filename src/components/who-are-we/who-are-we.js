@@ -20,10 +20,11 @@ function WhoAreWe() {
         {data.map((item, index) => {
           return (
             <article className="flex flex-col gap-3" key={index}>
-              <LazyLoadImage
+              <img
                 className="self-start"
                 alt={item.subheading}
                 src={item.image}
+                loading="lazy"
               />
               <h4 className="font-medium">{item.subheading}</h4>
               <p className="text-[15px]">{item.text}</p>

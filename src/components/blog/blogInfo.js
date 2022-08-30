@@ -37,7 +37,7 @@ function BlogInfo() {
               heading: item.heading,
               name_of_the_writer: item.nameofthewriter,
               designation: item.designation,
-              writerImage: item.writerImage.asset.url,
+              writerImage: item.writerImage?.asset.url,
             },
           ])
         })

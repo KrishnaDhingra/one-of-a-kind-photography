@@ -60,9 +60,10 @@ function HomePhotoSamplesContainer() {
               </div>
               <div className="sample-image-container">
                 {imageUrls && (
-                  <LazyLoadImage
+                  <img
                     alt={`Home photo sample ${index}`}
                     src={imageUrls[index]}
+                    loading="lazy"
                     width="100%"
                     height="100%"
                   />

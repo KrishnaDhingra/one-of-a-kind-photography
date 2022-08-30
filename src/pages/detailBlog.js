@@ -55,6 +55,7 @@ export default function DetailTrendingBlog() {
               </h1>
               <img
                 className="px-4 md:px-0 mx-auto rounded-2xl w-full sm:max-w-[27rem] object-cover aspect-video"
+                loading="lazy"
                 src={blog.mainImage}
                 alt={`${blog.heading} main image`}
               />

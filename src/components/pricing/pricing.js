@@ -92,8 +92,8 @@ function BasicPackagePoints() {
   const points = [
     '2 Events',
     'Candid Photography',
-    'Tranditional Photography',
-    'Tranditional Video',
+    'Traditional Photography',
+    'Traditional Video',
     'Wedding Film',
     'Premium album',
   ]
@@ -109,8 +109,8 @@ function CustomizedPackagePoints() {
   const points = [
     'Unlimited',
     'Candid Photography',
-    'Tranditional Photography',
-    'Tranditional Video',
+    'Traditional Photography',
+    'Traditional Video',
     'Wedding Film',
     'Luxury album',
     'Cloud Storage',
