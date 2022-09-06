@@ -32,12 +32,10 @@ function GetInTouchBangalore() {
   return (
     <main className="flex flex-col">
       <Helmet>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
+          name="keywords"
+          content="Wedding Photography in bangalore, Wedding Photographers in bangalore"
         />
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <title>
           Candid wedding Photographers in Bangalore | One of a Kind Photography
         </title>
@@ -45,8 +43,6 @@ function GetInTouchBangalore() {
           name="description"
           content="Candid wedding photographer in chennai: One of a kind photography team have a Candid Wedding Photographers in Chennai, We are always looking forward to capturing your best moments in big day"
         />
-        <meta name="robots" content="max-image-preview:large" />
-        {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
       </Helmet>
       <GetInTouch location={'Banaswadi, Bangalore - 560033'} />
       <ContactForm />

@@ -44,18 +44,18 @@ function Navbar() {
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
                     text={'Services'}
-                    redirect={'/services'}
+                    redirect={'/photographyservices'}
                   />
-                    <NavbarLink
-                      onClick={toggleNavbarVisibility}
-                      text={'Pricing'}
-                      redirect={'/pricing'}
-                    />
-                    <NavbarLink
-                      onClick={toggleNavbarVisibility}
-                      text={'Book Now'}
-                      redirect={'/book-now'}
-                    />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Pricing'}
+                    redirect={'/pricing'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Book Now'}
+                    redirect={'/book-now'}
+                  />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
                     text={'Jobs'}
@@ -65,8 +65,11 @@ function Navbar() {
                     onClick={toggleNavbarVisibility}
                     mainLink={{ text: 'Gallery', redirect: '/gallery' }}
                     subLinks={[
-                      { text: 'Wedding', redirect: '/wedding' },
-                      { text: 'Outdoor', redirect: '/outdoor' },
+                      { text: 'Wedding', redirect: '/wedding-photography' },
+                      {
+                        text: 'Outdoor',
+                        redirect: '/outdoor -wedding-photography',
+                      },
                       { text: 'Videos', redirect: '/videos' },
                     ]}
                   />
@@ -74,14 +77,17 @@ function Navbar() {
                     onClick={toggleNavbarVisibility}
                     mainLink={{ text: 'Location', redirect: null }}
                     subLinks={[
-                      { text: 'Chennai', redirect: '/get-in-touch-chennai' },
+                      {
+                        text: 'Chennai',
+                        redirect: '/wedding-photography-in-touch-chennai',
+                      },
                       {
                         text: 'Coimbatore',
-                        redirect: '/get-in-touch-coimbatore',
+                        redirect: '/wedding-photography-in-touch-coimbatore',
                       },
                       {
                         text: 'Bangalore',
-                        redirect: '/get-in-touch-bangalore',
+                        redirect: '/wedding-photography-in-touch-bangalore',
                       },
                     ]}
                   />

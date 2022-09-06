@@ -43,11 +43,7 @@ function Outdoor() {
   return (
     <div className="flex flex-col gap-4">
       <Helmet>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
+        <meta name="keywords" content="Outdoor wedding Photography" />
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <title>
           Outdoor wedding photography | Wedding outdoor photoshoot | OOAK
@@ -56,8 +52,6 @@ function Outdoor() {
           name="description"
           content="Outdoor wedding photography: One of a kind photography offer Wedding outdoor photoshoot and capture the best moments on your big day. For Outdoor wedding photography just click the website"
         />
-        <meta name="robots" content="max-image-preview:large" />
-        {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
       </Helmet>
       <OutdoorImagesCarousel
         images={imageUrls}

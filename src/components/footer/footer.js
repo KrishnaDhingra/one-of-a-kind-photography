@@ -84,8 +84,8 @@ function Footer() {
             {[
               { text: 'FAQ', redirect: 'faq' },
               { text: 'Blogs', redirect: 'blog' },
-              { text: 'Weddings', redirect: 'wedding' },
-              { text: 'Services', redirect: 'services' },
+              { text: 'Weddings', redirect: 'wedding-photography' },
+              { text: 'Services', redirect: 'photographyservices' },
               { text: 'Gallery', redirect: 'gallery' },
               { text: 'Videos', redirect: 'videos' },
               { text: 'About Us', redirect: 'aboutus' },

@@ -11,7 +11,6 @@ import sanityClient from '../../client'
 import { AnimatePresence } from 'framer-motion'
 import { useParams } from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import Backdrop from '../backdrop'
 
 function ImageGallery() {
   const [imageUrls, setImageUrls] = useState([])

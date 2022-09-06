@@ -154,7 +154,12 @@ const Article = ({ image, heading, text }) => {
 
   return (
     <motion.article variants={item} className="flex flex-col gap-4">
-      <img className="w-full aspect-video object-cover" src={image} alt="" />
+      <img
+        className="w-full aspect-video object-cover"
+        loading="lazy"
+        src={image}
+        alt=""
+      />
       <h3 className="font-bold">{heading}</h3>
       <p className="text-sm">{text}</p>
     </motion.article>

@@ -11,22 +11,7 @@ function Home() {
   return (
     <main className="relative flex flex-col mt-[3rem] sm:mt-[6rem]">
       <Helmet>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <title>
-          Wedding Photographers | candid wedding photographer | One of a Kind
-          Photography
-        </title>
-        <meta
-          name="description"
-          content="One of a Kind Photography: Has professional Candid wedding photographers in Chennai, Bangalore etc for Couple candid wedding photography, Pre/Post Wedding Photography"
-        />
-        <meta name="robots" content="max-image-preview:large" />
-        {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
+        <meta name="keywords" content="Wedding photography" />
       </Helmet>
       <HomeTopBar />
       <HomeBigButton />
