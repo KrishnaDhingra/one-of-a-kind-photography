@@ -68,7 +68,7 @@ function Navbar() {
                       { text: 'Wedding', redirect: '/wedding-photography' },
                       {
                         text: 'Outdoor',
-                        redirect: '/outdoor -wedding-photography',
+                        redirect: '/outdoor-wedding-photography',
                       },
                       { text: 'Videos', redirect: '/videos' },
                     ]}
@@ -79,15 +79,15 @@ function Navbar() {
                     subLinks={[
                       {
                         text: 'Chennai',
-                        redirect: '/wedding-photography-in-touch-chennai',
+                        redirect: '/wedding-photography-in-chennai',
                       },
                       {
                         text: 'Coimbatore',
-                        redirect: '/wedding-photography-in-touch-coimbatore',
+                        redirect: '/wedding-photography-in-coimbatore',
                       },
                       {
                         text: 'Bangalore',
-                        redirect: '/wedding-photography-in-touch-bangalore',
+                        redirect: '/wedding-photography-in-bangalore',
                       },
                     ]}
                   />

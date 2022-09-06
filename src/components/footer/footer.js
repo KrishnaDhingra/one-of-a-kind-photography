@@ -49,17 +49,23 @@ function Footer() {
               <BsMailbox2 className="shrink-0" />
               <ul className="flex flex-wrap gap-[0.5rem]">
                 <li>
-                  <Link className="ml-0" to={'/get-in-touch-chennai'}>
+                  <Link className="ml-0" to={'/wedding-photography-in-chennai'}>
                     Chennai |
                   </Link>
                 </li>
                 <li>
-                  <Link className="ml-0" to={'/get-in-touch-coimbatore'}>
+                  <Link
+                    className="ml-0"
+                    to={'/wedding-photography-in-coimbatore'}
+                  >
                     Coimbatore |
                   </Link>
                 </li>
                 <li>
-                  <Link className="ml-0" to={'/get-in-touch-bangalore'}>
+                  <Link
+                    className="ml-0"
+                    to={'/wedding-photography-in-bangalore'}
+                  >
                     Bangalore |
                   </Link>
                 </li>

@@ -85,15 +85,15 @@ function App() {
                 <Route path="/book-now" element={<BookNow />} />
                 <Route path="/image-gallery/:id" element={<ImageGallery />} />
                 <Route
-                  path="/wedding-photography-in-touch-chennai"
+                  path="/wedding-photography-in-chennai"
                   element={<GetInTouchChennai />}
                 />
                 <Route
-                  path="/wedding-photography-in-touch-bangalore"
+                  path="/wedding-photography-in-bangalore"
                   element={<GetInTouchBangalore />}
                 />
                 <Route
-                  path="/wedding-photography-in-touch-coimbatore"
+                  path="/wedding-photography-in-coimbatore"
                   element={<GetInTouchCoimbatore />}
                 />
                 <Route path="/videos/:id" element={<Video />} />
