@@ -25,7 +25,7 @@ function HomeTopBar() {
         <p className="text-md m-0 ">
           Let's frame what it feels like to express love in a most natural way.
         </p>
-        <Link to="/wedding" className="start font-semibold">
+        <Link to="/wedding-photography" className="start font-semibold">
           <span>Start</span>
         </Link>
       </div>
