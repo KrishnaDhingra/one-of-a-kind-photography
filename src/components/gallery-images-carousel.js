@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './wedding-images-carousel.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useNavigate } from 'react-router-dom'
@@ -11,13 +10,7 @@ import 'swiper/css/pagination'
 
 import { EffectCoverflow, Pagination } from 'swiper'
 
-function WeddingImagesCarousel({
-  visible,
-  hoverText,
-  images,
-  imageGalleriesId,
-  defaultHeading,
-}) {
+function GalleryImagesCarousel({ visible, hoverText, images, defaultHeading }) {
   const history = useNavigate()
 
   const parentVariants = {
@@ -43,9 +36,11 @@ function WeddingImagesCarousel({
           centeredSlides={true}
           centeredSlidesBounds={true}
           slidesPerView={'auto'}
+          // loop={true}
           spaceBetween={25}
           onSlideChange={({ activeIndex }) => {
             setIsVisible(false)
+            // change this to items[activeIndex].text
             setSelected(hoverText[activeIndex])
           }}
           coverflowEffect={{
@@ -66,7 +61,7 @@ function WeddingImagesCarousel({
                   let slug = hoverText[index]
                   // remove white spaces at start and end, convert it into lowercase and then replace all the white spaces in between with '-'
                   slug = slug.trim().toLowerCase().replace(/\s/g, '-')
-                  history(`/wedding/${slug}`)
+                  history(`/gallery/${slug}`)
                 }}
               >
                 <img src={image} />
@@ -97,17 +92,17 @@ function WeddingImagesCarousel({
                   setSelected(hoverText[index])
                 }}
                 onMouseLeave={() => setIsVisible(true)}
-                whileHover={{
-                  width: '200px',
-                  transition: { duration: 0.4 },
-                }}
                 onClick={() => {
                   let slug = hoverText[index]
                   // remove white spaces at start and end, convert it into lowercase and then replace all the white spaces in between with '-'
                   slug = slug.trim().toLowerCase().replace(/\s/g, '-')
-                  history(`/wedding/${slug}`)
+                  history(`/gallery/${slug}`)
                 }}
-                className="wedding-image"
+                whileHover={{
+                  width: '220px',
+                  transition: { duration: 0.4 },
+                }}
+                className="videos-image"
                 style={{
                   backgroundImage: `url(${image})`,
                 }}
@@ -150,4 +145,4 @@ function Heading({ content }) {
     </motion.h1>
   )
 }
-export default WeddingImagesCarousel
+export default GalleryImagesCarousel

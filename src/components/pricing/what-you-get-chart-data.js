@@ -10,7 +10,7 @@ export const data = [
     isCustomizedPackageAvailable: true,
   },
   {
-    providing: 'Traditional / Conventional Video',
+    providing: 'Conventional Video',
     isBasicPackageAvailable: true,
     isCustomizedPackageAvailable: true,
   },

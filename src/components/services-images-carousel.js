@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -10,12 +10,11 @@ import 'swiper/css/pagination'
 
 import { EffectCoverflow, Pagination } from 'swiper'
 
-function OutdoorImagesCarousel({
+function ServicesImagesCarousel({
   visible,
   hoverText,
   images,
   defaultHeading,
-  imageGalleriesId,
 }) {
   const history = useNavigate()
 
@@ -64,7 +63,10 @@ function OutdoorImagesCarousel({
               <SwiperSlide
                 key={index}
                 onClick={() => {
-                  history(`/image-gallery/${imageGalleriesId[index]}`)
+                  let slug = hoverText[index]
+                  // remove white spaces at start and end, convert it into lowercase and then replace all the white spaces in between with '-'
+                  slug = slug.trim().toLowerCase().replace(/\s/g, '-')
+                  history(`/services/${slug}`)
                 }}
               >
                 <img src={image} />
@@ -96,7 +98,10 @@ function OutdoorImagesCarousel({
                 }}
                 onMouseLeave={() => setIsVisible(true)}
                 onClick={() => {
-                  history(`/image-gallery/${imageGalleriesId[index]}`)
+                  let slug = hoverText[index]
+                  // remove white spaces at start and end, convert it into lowercase and then replace all the white spaces in between with '-'
+                  slug = slug.trim().toLowerCase().replace(/\s/g, '-')
+                  history(`/services/${slug}`)
                 }}
                 whileHover={{
                   width: '220px',
@@ -145,4 +150,4 @@ function Heading({ content }) {
     </motion.h1>
   )
 }
-export default OutdoorImagesCarousel
+export default ServicesImagesCarousel

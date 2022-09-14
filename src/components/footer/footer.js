@@ -49,23 +49,17 @@ function Footer() {
               <BsMailbox2 className="shrink-0" />
               <ul className="flex flex-wrap gap-[0.5rem]">
                 <li>
-                  <Link className="ml-0" to={'/wedding-photography-in-chennai'}>
+                  <Link className="ml-0" to={'/get-in-touch-chennai'}>
                     Chennai |
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="ml-0"
-                    to={'/wedding-photography-in-coimbatore'}
-                  >
+                  <Link className="ml-0" to={'/get-in-touch-coimbatore'}>
                     Coimbatore |
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="ml-0"
-                    to={'/wedding-photography-in-bangalore'}
-                  >
+                  <Link className="ml-0" to={'/get-in-touch-bangalore'}>
                     Bangalore |
                   </Link>
                 </li>
@@ -90,8 +84,8 @@ function Footer() {
             {[
               { text: 'FAQ', redirect: 'faq' },
               { text: 'Blogs', redirect: 'blog' },
-              { text: 'Weddings', redirect: 'wedding-photography' },
-              { text: 'Services', redirect: 'photographyservices' },
+              { text: 'Weddings', redirect: 'wedding' },
+              { text: 'Services', redirect: 'services' },
               { text: 'Gallery', redirect: 'gallery' },
               { text: 'Videos', redirect: 'videos' },
               { text: 'About Us', redirect: 'aboutus' },

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import WeddingImagesCarousel from '../components/wedding-images-carousel/wedding-images-carousel'
+import ServicesImagesCarousel from '../components/services-images-carousel'
 import ServicesMore from '../components/services-more/services-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
 import sanityClient from '../client'
@@ -60,7 +60,7 @@ function Services() {
         <meta name="robots" content="max-image-preview:large" />
         {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
       </Helmet>
-      <WeddingImagesCarousel
+      <ServicesImagesCarousel
         images={imageUrls}
         hoverText={hoverText}
         defaultHeading={'Services'}

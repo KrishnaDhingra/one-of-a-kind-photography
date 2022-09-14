@@ -13,7 +13,6 @@ function Wedding() {
   }
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
-  const [imageGalleriesId, setImageGalleriesId] = useState([])
   useEffect(() => {
     sanityClient
       .fetch(
@@ -24,17 +23,12 @@ function Wedding() {
           }
       },
       hoverText,
-      imageGallery->{
-        _id
-      }
   }`,
       )
       .then((data) => {
         data.forEach((item) => {
-          console.log(item.imageGallery._id)
           setImageUrls((prev) => [...prev, item.mainImage.asset.url])
           setHoverText((prev) => [...prev, item.hoverText])
-          setImageGalleriesId((prev) => [...prev, item.imageGallery._id])
         })
       })
       .catch(console.log)
@@ -43,6 +37,12 @@ function Wedding() {
   return (
     <div className="flex flex-col gap-4">
       <Helmet>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <title>
           Candid Wedding photographers in Chennai | Coimbatore | Bangalore |
           OOAK
@@ -51,11 +51,12 @@ function Wedding() {
           name="description"
           content="Wedding Photography services: Oneofakindphotography is offer the best wedding photography services in chennai, Bangalore, Coimbatore. OOAK specialized in candid wedding photography and more"
         />
+        <meta name="robots" content="max-image-preview:large" />
+        {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
       </Helmet>
       <WeddingImagesCarousel
         images={imageUrls}
         hoverText={hoverText}
-        imageGalleriesId={imageGalleriesId}
         defaultHeading={'Wedding'}
       />
       <WeddingFooter scrollIntoView={scrollIntoView} />

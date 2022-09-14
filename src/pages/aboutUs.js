@@ -10,7 +10,12 @@ function AboutUs() {
   return (
     <main className="">
       <Helmet>
-        <meta name="keywords" content="Wedding photography" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <title>
           Wedding photographers | candid wedding photographer | One of a kind
           photography
@@ -19,6 +24,8 @@ function AboutUs() {
           name="description"
           content="Candid wedding photographer: Book our best Candid Wedding Photographers to capture the best moments of your big day. One of a kind photography have best wedding photographer in chennai"
         />
+        <meta name="robots" content="max-image-preview:large" />
+        {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
       </Helmet>
       <AboutUsTopSection />
 

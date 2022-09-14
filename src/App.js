@@ -25,7 +25,6 @@ import BookNow from './pages/book-now'
 import Video from './components/video/video'
 import ImageGallery from './components/image-gallery/image-gallery'
 import DetailBlog from './pages/detailBlog'
-import { Helmet } from 'react-helmet'
 function App() {
   const [loading, setLoading] = useState(true)
 
@@ -43,39 +42,15 @@ function App() {
             <Enter key="enter-animation" />
           ) : (
             <>
-              <Helmet>
-                <meta
-                  http-equiv="Content-Type"
-                  content="text/html; charset=UTF-8"
-                />
-                <meta
-                  name="viewport"
-                  content="width=device-width, initial-scale=1, maximum-scale=1"
-                />
-                <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-                <title>
-                  Wedding Photographers | candid wedding photographer | One of a
-                  Kind Photography
-                </title>
-                <meta
-                  name="description"
-                  content="One of a Kind Photography: Has professional Candid wedding photographers in Chennai, Bangalore etc for Couple candid wedding photography, Pre/Post Wedding Photography"
-                />
-                <meta name="robots" content="max-image-preview:large" />
-                {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
-              </Helmet>
               <Navbar />
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/enter" element={<Enter />} />
                 <Route path="/faq" element={<FAQ />} />
-                <Route path="/wedding-photography" element={<Wedding />} />
-                <Route path="/photographyservices" element={<Services />} />
+                <Route path="/wedding" element={<Wedding />} />
+                <Route path="/services" element={<Services />} />
                 <Route path="/gallery" element={<Gallery />} />
-                <Route
-                  path="/outdoor-wedding-photography"
-                  element={<Outdoor />}
-                />
+                <Route path="/outdoor" element={<Outdoor />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/detail-blog/:id" element={<DetailBlog />} />
                 <Route path="/pricing" element={<Pricing />} />
@@ -83,17 +58,24 @@ function App() {
                 <Route path="/videos" element={<Videos />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/book-now" element={<BookNow />} />
-                <Route path="/image-gallery/:id" element={<ImageGallery />} />
+                {[
+                  'gallery/:id',
+                  'wedding/:id',
+                  'services/:id',
+                  'outdoor/:id',
+                ].map((path) => (
+                  <Route key={path} path={path} element={<ImageGallery />} />
+                ))}
                 <Route
-                  path="/wedding-photography-in-chennai"
+                  path="/get-in-touch-chennai"
                   element={<GetInTouchChennai />}
                 />
                 <Route
-                  path="/wedding-photography-in-bangalore"
+                  path="/get-in-touch-bangalore"
                   element={<GetInTouchBangalore />}
                 />
                 <Route
-                  path="/wedding-photography-in-coimbatore"
+                  path="/get-in-touch-coimbatore"
                   element={<GetInTouchCoimbatore />}
                 />
                 <Route path="/videos/:id" element={<Video />} />

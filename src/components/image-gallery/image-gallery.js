@@ -11,6 +11,7 @@ import sanityClient from '../../client'
 import { AnimatePresence } from 'framer-motion'
 import { useParams } from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import Backdrop from '../backdrop'
 
 function ImageGallery() {
   const [imageUrls, setImageUrls] = useState([])
@@ -20,23 +21,36 @@ function ImageGallery() {
   const toggleSliderVisible = () => {
     setSliderVisible(!sliderVisible)
   }
-  const { id } = useParams()
+  const toTitleCase = (phrase) => {
+    return phrase
+      .toLowerCase()
+      .split(' ')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+  }
+
+  let { id } = useParams()
+  id = id.replace(/-/g, ' ')
+  id = toTitleCase(id)
+  console.log(id)
   useEffect(() => {
     let cancel = false
     sanityClient
       .fetch(
-        `*[_id == "${id}"] {
-          image[]{
-            asset->{
+        `*[hoverText=="${id}"] {
+          imageGallery->{
+            image[]{
+              asset->{
               url
             }
           }
+        }
       }`,
       )
       .then((data) => {
+        console.log(data)
         if (cancel) return
-        console.log(data[0].image)
-        setImageUrls(data[0].image)
+        setImageUrls(data[0].imageGallery.image)
       })
       .catch((error) => {
         console.log(error)

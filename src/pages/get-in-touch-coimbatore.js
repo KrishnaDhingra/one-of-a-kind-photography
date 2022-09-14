@@ -32,10 +32,12 @@ function GetInTouchCoimbatore() {
   return (
     <main className="flex flex-col">
       <Helmet>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta
-          name="keywords"
-          content="Wedding Photography in coimbatore, Wedding Photographers in coimbatore"
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
         />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <title>
           Candid wedding Photographers in Coimbatore| One of a Kind Photography
         </title>
@@ -43,6 +45,8 @@ function GetInTouchCoimbatore() {
           name="description"
           content="Candid wedding photographer in Coimbatore: One of a kind photography team have a Candid Wedding Photographers in Chennai, We are always looking forward to capturing your best moments in big day"
         />
+        <meta name="robots" content="max-image-preview:large" />
+        {/* <link rel="canonical" href="https://oneofakindphotography.in/" /> */}
       </Helmet>
       <GetInTouch location={'Gandhipuram, Coimbatore - 641603'} />
       <ContactForm />
